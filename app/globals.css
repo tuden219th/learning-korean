@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffaf6;
+  --foreground: #151515;
+  --accent: #e07a5f; /* warm coral */
+  --muted: #f6ede6; /* warm paper */
+  --card: #fff;
+  --glass: rgba(255,255,255,0.6);
 }
 
 @theme inline {
@@ -22,5 +26,46 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), var(--font-kr), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Hero and layout tokens */
+.hero {
+  background: linear-gradient(180deg, rgba(224,122,95,0.06), rgba(255,255,255,0));
+  border-radius: 14px;
+}
+.hero .decor {
+  position: relative;
+}
+.hangul-deco {
+  font-weight: 800;
+  color: rgba(224,122,95,0.12);
+  font-size: 6rem;
+  line-height: 1;
+  transform: rotate(-12deg);
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  pointer-events: none;
+}
+.path-card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.06);
+}
+.path-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,var(--muted),#fff);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent);
+  margin-right: 12px;
+}
+.muted-quote {
+  color: #6b6b6b;
 }

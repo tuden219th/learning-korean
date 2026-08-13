@@ -1,6 +1,7 @@
 import Link from "next/link";
 import CourseCard from "../components/CourseCard";
 import ContinueCard from "../components/ContinueCard";
+import Hero from "../components/Hero";
 
 export default async function Home() {
   const { getEntity, getChildren, getCatalog } = await import("../lib/content");
@@ -42,21 +43,44 @@ export default async function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-50 text-slate-900 dark:bg-black dark:text-zinc-50">
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        <section className="mb-6">
-          <ContinueCard nextLesson={nextLesson} />
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <main className="max-w-5xl mx-auto px-4 py-10">
+        <Hero />
+
+        {nextLesson && (
+          <section className="mb-6">
+            <ContinueCard nextLesson={nextLesson} />
+          </section>
+        )}
+
+        <section className="my-6 text-center">
+          <div className="text-xl font-medium">처음은 언제나 어렵지만, 한 걸음씩.</div>
+          <div className="muted-quote mt-2">Mọi hành trình đều bắt đầu từ một bước nhỏ.</div>
         </section>
 
-        <section>
-          <h2 className="text-lg font-semibold mb-4">Courses</h2>
+        <section id="courses">
+          <h2 className="text-2xl font-extrabold mb-4">Lộ trình học</h2>
           <div className="grid gap-4">
-            {visibleCourses.map((course: any) => (
-              <CourseCard key={course.id} course={course} />
+            {visibleCourses.map((course: any, idx: number) => (
+              <CourseCard key={course.id} course={course} index={idx + 1} />
             ))}
           </div>
         </section>
       </main>
+
+      <footer className="border-t py-8 mt-12 bg-transparent">
+        <div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-start justify-between gap-6">
+          <div>
+            <div className="font-semibold text-lg">Từ Đến Café</div>
+            <div className="text-sm text-zinc-600 mt-2 max-w-md">Từ Đến Café — một không gian học tập ấm áp dành cho người bắt đầu học tiếng Hàn. Bài học ngắn, thực hành và văn phong dễ tiếp cận.</div>
+          </div>
+
+          <div className="text-sm text-zinc-600">
+            <div><a href="https://tudencafe.com" className="underline">Trang chủ Từ Đến Café</a></div>
+            <div className="mt-2">Email: contact@tudencafe.com</div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
