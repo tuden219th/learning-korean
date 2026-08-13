@@ -173,6 +173,59 @@
       "parentId": "module-ko-greetings",
       "activities": ["act-fc-10", "act-mc-10"]
     }
+    ,
+    {
+      "id": "course-ko-hangul-foundation",
+      "slug": "hangul-foundation",
+      "title": "Hangul Foundation",
+      "language": "ko",
+      "type": "course",
+      "parentId": "goal-ko-beginner"
+    },
+    {
+      "id": "module-ko-hangul-2",
+      "slug": "module-2-basic-vowels",
+      "title": "Module 2: Basic Vowels",
+      "language": "ko",
+      "type": "module",
+      "parentId": "course-ko-hangul-foundation"
+    },
+    {
+      "id": "ko-hangul-2-1",
+      "slug": "ko-hangul-2-1",
+      "title": "Basic Vowels: ㅏ, ㅓ, ㅗ, ㅜ",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-hangul-2",
+      "activities": ["act-fc-h2-1"]
+    },
+    {
+      "id": "ko-hangul-2-2",
+      "slug": "ko-hangul-2-2",
+      "title": "Y‑sound Vowels: ㅑ, ㅕ, ㅛ, ㅠ",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-hangul-2",
+      "activities": ["act-fc-h2-2"]
+    },
+    {
+      "id": "ko-hangul-2-3",
+      "slug": "ko-hangul-2-3",
+      "title": "Compound Vowels",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-hangul-2",
+      "activities": ["act-fc-h2-3"]
+    },
+    {
+      "id": "ko-hangul-2-4",
+      "slug": "ko-hangul-2-4",
+      "title": "Vowel Practice & Mini Quiz",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-hangul-2",
+      "activities": ["act-fc-h2-4", "act-mc-h2-4"]
+    }
   ],
   "activities": [
     { "type": "flashcard", "id": "act-fc-1", "cards": [ { "front": "안녕하세요", "back": "Hello (formal)" }, { "front": "안녕", "back": "Hi / Bye (informal)" } ] },
@@ -204,5 +257,11 @@
 
     { "type": "flashcard", "id": "act-fc-10", "cards": [ { "front": "안녕하세요 / 안녕", "back": "Hello (formal/informal)" }, { "front": "감사합니다 / 고마워", "back": "Thank you (formal/informal)" } ] },
     { "type": "multiple_choice", "id": "act-mc-10", "question": "Which pair is a formal and informal greeting?", "choices": [ { "id": "c1", "text": "안녕하세요 / 안녕", "correct": true }, { "id": "c2", "text": "감사합니다 / 고마워", "correct": false }, { "id": "c3", "text": "안녕히 가세요 / 안녕히 계세요", "correct": false } ] }
+    ,
+    { "type": "flashcard", "id": "act-fc-h2-1", "cards": [ { "front": "ㅏ", "back": "a — as in 가 (ga)" }, { "front": "ㅓ", "back": "eo — as in 거 (geo)" }, { "front": "ㅗ", "back": "o — as in 고 (go)" }, { "front": "ㅜ", "back": "u — as in 구 (gu)" } ] },
+    { "type": "flashcard", "id": "act-fc-h2-2", "cards": [ { "front": "ㅑ", "back": "ya — as in 갸 (gya)" }, { "front": "ㅕ", "back": "yeo — as in 겨 (gyeo)" }, { "front": "ㅛ", "back": "yo — as in 교 (gyo)" }, { "front": "ㅠ", "back": "yu — as in 규 (gyu)" } ] },
+    { "type": "flashcard", "id": "act-fc-h2-3", "cards": [ { "front": "ㅐ", "back": "ae — as in 배 (bae)" }, { "front": "ㅔ", "back": "e — as in 세 (se)" }, { "front": "ㅘ", "back": "wa — as in 과 (gwa)" }, { "front": "ㅚ", "back": "oe — as in 괴 (goe)" } ] },
+    { "type": "flashcard", "id": "act-fc-h2-4", "cards": [ { "front": "ㅏ vs ㅓ", "back": "Practice distinguishing ㅏ (a) and ㅓ (eo)" }, { "front": "ㅗ vs ㅜ", "back": "Practice distinguishing ㅗ (o) and ㅜ (u)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-h2-4", "question": "Which syllable contains the vowel ㅕ?", "choices": [ { "id": "c1", "text": "가", "correct": false }, { "id": "c2", "text": "겨", "correct": true }, { "id": "c3", "text": "교", "correct": false } ] }
   ]
 }
