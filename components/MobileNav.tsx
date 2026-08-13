@@ -1,9 +1,25 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { createPortal } from "react-dom";
 
 export default function MobileNav({ courses, onClose, language }: any) {
-  return (
+  const hostRef = useRef<HTMLDivElement | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const el = document.createElement("div");
+    document.body.appendChild(el);
+    hostRef.current = el;
+    setMounted(true);
+    return () => {
+      if (hostRef.current && hostRef.current.parentNode) {
+        hostRef.current.parentNode.removeChild(hostRef.current);
+      }
+    };
+  }, []);
+
+  const content = (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <aside className="absolute right-0 top-0 w-80 h-full bg-white dark:bg-zinc-900 p-4 overflow-auto">
@@ -36,4 +52,7 @@ export default function MobileNav({ courses, onClose, language }: any) {
       </aside>
     </div>
   );
+
+  if (!mounted || !hostRef.current) return null;
+  return createPortal(content, hostRef.current);
 }
