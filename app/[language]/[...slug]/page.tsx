@@ -102,15 +102,39 @@ export default async function Page({ params }: Props) {
 
           <main className="col-span-1 md:col-span-3">
             <div className="mb-4 text-sm text-zinc-600">
-              <nav className="flex flex-wrap items-center gap-2">
-                {breadcrumb.map((b, i) => (
-                  <span key={b.id} className="flex items-center gap-2">
-                    <a href={`/${language}/${breadcrumb.slice(1, i + 1).map((x) => x.slug).join('/')}`} className="hover:underline">
-                      {b.title}
-                    </a>
-                    {i < breadcrumb.length - 1 && <span className="text-zinc-400">/</span>}
-                  </span>
-                ))}
+              <nav className="flex items-center gap-2">
+                {(() => {
+                  const crumbs = breadcrumb;
+                  if (crumbs.length <= 3) {
+                    return crumbs.map((b, i) => (
+                      <span key={b.id} className="flex items-center gap-2">
+                        <a href={`/${language}/${breadcrumb.slice(1, i + 1).map((x) => x.slug).join('/')}`} className="hover:underline">
+                          {b.title}
+                        </a>
+                        {i < crumbs.length - 1 && <span className="text-zinc-400">/</span>}
+                      </span>
+                    ));
+                  }
+
+                  const first = crumbs[0];
+                  const lastTwo = crumbs.slice(-2);
+                  return (
+                    <>
+                      <a href={`/${language}/${first.slug}`} className="hover:underline">{first.title}</a>
+                      <span className="text-zinc-400">/</span>
+                      <span className="text-zinc-400">…</span>
+                      <span className="text-zinc-400">/</span>
+                      {lastTwo.map((b, i) => (
+                        <span key={b.id} className="flex items-center gap-2">
+                          <a href={`/${language}/${breadcrumb.slice(1, breadcrumb.length - 2 + i + 1).map((x) => x.slug).join('/')}`} className="hover:underline">
+                            {b.title}
+                          </a>
+                          {i < lastTwo.length - 1 && <span className="text-zinc-400">/</span>}
+                        </span>
+                      ))}
+                    </>
+                  );
+                })()}
               </nav>
             </div>
 
@@ -133,19 +157,26 @@ export default async function Page({ params }: Props) {
               })}
             </article>
 
-            <footer className="mt-8 flex items-center justify-between">
+            <footer className="mt-8 flex items-center justify-between space-x-4">
               <div>
                 {prevLesson ? (
-                  <a href={`/${basePath}/${prevLesson.slug}`} className="px-3 py-2 border rounded">
+                  <a href={`/${basePath}/${prevLesson.slug}`} className="px-3 py-2 border rounded text-sm">
                     ← {prevLesson.title}
                   </a>
                 ) : (
                   <span />
                 )}
               </div>
+
+              <div className="mx-auto">
+                <a href={`/${basePath}`} className="px-3 py-2 border rounded text-sm bg-white dark:bg-zinc-800">
+                  Course
+                </a>
+              </div>
+
               <div>
                 {nextLesson ? (
-                  <a href={`/${basePath}/${nextLesson.slug}`} className="px-3 py-2 bg-foreground text-background rounded">
+                  <a href={`/${basePath}/${nextLesson.slug}`} className="px-3 py-2 bg-foreground text-background rounded text-sm">
                     {nextLesson.title} →
                   </a>
                 ) : (
