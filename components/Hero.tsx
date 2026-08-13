@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RandomEncouragement from "./RandomEncouragement";
 
 export default function Hero() {
   return (
@@ -7,6 +8,7 @@ export default function Hero() {
         <div>
           <h1 className="text-3xl sm:text-4xl font-extrabold mb-3">안녕! 한국어를 배워볼까요?</h1>
           <p className="text-lg text-zinc-700 mb-4">Bắt đầu hành trình học tiếng Hàn theo từng bước — ấm áp, chậm rãi và có mục tiêu.</p>
+          <RandomEncouragement />
 
           <div className="flex gap-3">
             <Link href="/ko" className="px-5 py-2 rounded-md bg-[var(--accent)] text-white font-semibold">Bắt đầu học</Link>
