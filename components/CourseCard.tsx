@@ -15,7 +15,7 @@ export default function CourseCard({ course, index }: CourseCardProps) {
   const firstLesson = firstModule && firstModule.lessons && firstModule.lessons[0];
   const lessonPath = firstLesson ? `/${[course.language, firstModule.slug, firstLesson.slug].filter(Boolean).join('/')}` : null;
 
-  const lessonCount = (course.modules || []).reduce((sum: number, m: any) => sum + ((m.lessons || []).length), 0);
+  const lessonCount = course.modules.reduce((sum, module) => sum + module.lessons.length, 0);
   const completedCount = course.modules
     .flatMap((module) => module.lessons)
     .filter((lesson) => completedLessonIds.includes(lesson.id)).length;
@@ -39,6 +39,39 @@ export default function CourseCard({ course, index }: CourseCardProps) {
         {lessonPath && (
           <Link href={lessonPath} className="text-sm text-[var(--accent)] font-semibold">Bắt đầu học →</Link>
         )}
+      </div>
+
+      <div className="mt-5 border-t border-zinc-200 pt-4">
+        <p className="text-sm font-semibold text-zinc-700">Nội dung khóa học</p>
+        <div className="mt-3 space-y-4">
+          {course.modules.map((module) => (
+            <div key={module.id}>
+              <p className="text-sm font-medium">{module.title}</p>
+              <ol className="mt-2 space-y-1">
+                {module.lessons.map((lesson, lessonIndex) => {
+                  const isCompleted = completedLessonIds.includes(lesson.id);
+                  const href = `/${course.language}/${module.slug}/${lesson.slug}`;
+
+                  return (
+                    <li key={lesson.id}>
+                      <Link
+                        href={href}
+                        className="flex items-center gap-2 rounded px-2 py-1.5 text-sm hover:bg-zinc-50"
+                      >
+                        <span className={isCompleted ? "text-emerald-600" : "text-zinc-400"} aria-hidden="true">
+                          {isCompleted ? "✓" : lessonIndex + 1}
+                        </span>
+                        <span className={isCompleted ? "text-zinc-500 line-through" : "text-zinc-700"}>
+                          {lesson.title}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+          ))}
+        </div>
       </div>
     </article>
   );
