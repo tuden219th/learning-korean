@@ -42,7 +42,24 @@ export function getLessonContent(lessonId: string): string {
 
 export function findEntityBySlug(language: string, slugPath: string[]): EntityBase | undefined {
   if (!slugPath || slugPath.length === 0) return undefined;
-  const last = slugPath[slugPath.length - 1];
   const catalog = loadCatalog();
-  return catalog.entities.find((e) => e.slug === last && e.language === language);
+  const last = slugPath[slugPath.length - 1];
+
+  return catalog.entities.find((entity) => {
+    if (entity.slug !== last || entity.language !== language) return false;
+
+    const ancestry: string[] = [];
+    let current: EntityBase | undefined = entity;
+    while (current) {
+      ancestry.unshift(current.slug);
+      current = current.parentId
+        ? catalog.entities.find((candidate) => candidate.id === current?.parentId)
+        : undefined;
+    }
+
+    const routeSegments = ancestry[0] === language ? ancestry.slice(1) : ancestry;
+    return slugPath.every(
+      (segment, index) => routeSegments[routeSegments.length - slugPath.length + index] === segment,
+    );
+  });
 }

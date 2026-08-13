@@ -2,12 +2,13 @@ import React from 'react';
 import { getLessonContent, findEntityBySlug, getEntity, getChildren } from '../../../lib/content';
 import { marked } from 'marked';
 import Activity from '../../../components/MDXComponents';
+import LessonCompletion from '../../../components/LessonCompletion';
 
 type Props = {
-  params: {
+  params: Promise<{
     language: string;
     slug?: string[];
-  };
+  }>;
 };
 
 export default async function Page({ params }: Props) {
@@ -156,6 +157,10 @@ export default async function Page({ params }: Props) {
                 );
               })}
             </article>
+
+            <div className="mt-6">
+              <LessonCompletion lessonId={entity.id} />
+            </div>
 
             <footer className="mt-8 flex items-center justify-between space-x-4">
               <div>

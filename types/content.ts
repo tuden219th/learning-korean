@@ -14,7 +14,13 @@ export interface EntityBase {
   language: string;
   type: EntityType;
   parentId?: string;
+  order?: number;
   meta?: unknown;
+}
+
+export interface CourseWithModules extends EntityBase {
+  type: 'course';
+  modules: Array<EntityBase & { lessons: EntityBase[] }>;
 }
 
 export interface Language extends EntityBase {

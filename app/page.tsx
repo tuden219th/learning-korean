@@ -1,57 +1,37 @@
 import Link from "next/link";
 import CourseCard from "../components/CourseCard";
-import ContinueCard from "../components/ContinueCard";
 import Hero from "../components/Hero";
+import LearningProgress from "../components/LearningProgress";
+import type { CourseWithModules } from "../types/content";
 
 export default async function Home() {
   const { getEntity, getChildren, getCatalog } = await import("../lib/content");
   const lang = getEntity("lang-ko");
 
   const catalog = getCatalog();
-  const courses = catalog.entities.filter((e: any) => e.type === 'course');
+  const courses = catalog.entities
+    .filter((e) => e.type === "course" && e.language === "ko")
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 
-  function buildCourseTree(c: any) {
+  function buildCourseTree(c: (typeof courses)[number]): CourseWithModules {
     const modules = getChildren(c.id) || [];
     const modulesWithLessons = modules
-      .map((m: any) => {
+      .map((m) => {
         const lessons = getChildren(m.id) || [];
         return { ...m, lessons };
       })
       .filter((m: any) => (m.lessons || []).length > 0);
-    return { ...c, modules: modulesWithLessons };
+    return { ...c, type: "course", modules: modulesWithLessons };
   }
 
-  const visibleCourses = courses.map(buildCourseTree).filter((c: any) => (c.modules || []).length > 0);
-
-  // Choose a sensible "next lesson" for ContinueCard: first lesson of first visible course
-  let nextLesson = null;
-  if (visibleCourses.length > 0) {
-    const c = visibleCourses[0];
-    const m = c.modules && c.modules[0];
-    const l = m && m.lessons && m.lessons[0];
-    if (l) {
-      nextLesson = {
-        id: l.id,
-        title: l.title,
-        slug: l.slug,
-        language: c.language || 'ko',
-        moduleSlug: m.slug,
-        moduleTitle: m.title,
-        courseTitle: c.title,
-      };
-    }
-  }
+  const visibleCourses = courses.map(buildCourseTree).filter((course) => course.modules.length > 0);
 
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <main className="max-w-5xl mx-auto px-4 py-10">
         <Hero />
 
-        {nextLesson && (
-          <section className="mb-6">
-            <ContinueCard nextLesson={nextLesson} />
-          </section>
-        )}
+        <LearningProgress courses={visibleCourses} />
 
         <section className="my-6 text-center">
           <div className="text-xl font-medium">처음은 언제나 어렵지만, 한 걸음씩.</div>
@@ -61,7 +41,7 @@ export default async function Home() {
         <section id="courses">
           <h2 className="text-2xl font-extrabold mb-4">Lộ trình học</h2>
           <div className="grid gap-4">
-            {visibleCourses.map((course: any, idx: number) => (
+            {visibleCourses.map((course, idx) => (
               <CourseCard key={course.id} course={course} index={idx + 1} />
             ))}
           </div>

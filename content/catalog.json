@@ -62,6 +62,7 @@
       "title": "Greetings Basics",
       "language": "ko",
       "type": "course",
+      "order": 2,
       "parentId": "level-ko-1"
     },
 
@@ -180,6 +181,7 @@
       "title": "Hangul Foundation",
       "language": "ko",
       "type": "course",
+      "order": 1,
       "parentId": "goal-ko-beginner"
     },
     {
