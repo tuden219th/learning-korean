@@ -1,0 +1,208 @@
+{
+  "entities": [
+    {
+      "id": "lang-en",
+      "slug": "en",
+      "title": "English",
+      "language": "en",
+      "type": "language"
+    },
+    {
+      "id": "lang-ko",
+      "slug": "ko",
+      "title": "Korean",
+      "language": "ko",
+      "type": "language"
+    },
+    {
+      "id": "lang-fr",
+      "slug": "fr",
+      "title": "French",
+      "language": "fr",
+      "type": "language"
+    },
+    {
+      "id": "lang-vi",
+      "slug": "vi",
+      "title": "Vietnamese",
+      "language": "vi",
+      "type": "language"
+    },
+
+    {
+      "id": "goal-ko-beginner",
+      "slug": "beginner",
+      "title": "Beginner",
+      "language": "ko",
+      "type": "goal",
+      "parentId": "lang-ko"
+    },
+
+    {
+      "id": "path-ko-greetings",
+      "slug": "greetings",
+      "title": "Greetings",
+      "language": "ko",
+      "type": "path",
+      "parentId": "goal-ko-beginner"
+    },
+
+    {
+      "id": "level-ko-1",
+      "slug": "level-1",
+      "title": "Level 1",
+      "language": "ko",
+      "type": "level",
+      "parentId": "path-ko-greetings"
+    },
+
+    {
+      "id": "course-ko-greetings-basics",
+      "slug": "greetings-basics",
+      "title": "Greetings Basics",
+      "language": "ko",
+      "type": "course",
+      "parentId": "level-ko-1"
+    },
+
+    {
+      "id": "module-ko-greetings",
+      "slug": "greetings",
+      "title": "Greetings",
+      "language": "ko",
+      "type": "module",
+      "parentId": "course-ko-greetings-basics"
+    },
+
+    {
+      "id": "ko-greetings-1",
+      "slug": "ko-greetings-1",
+      "title": "Basic greetings",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-1", "act-mc-1"]
+    },
+
+    {
+      "id": "ko-greetings-2",
+      "slug": "ko-greetings-2",
+      "title": "Formal vs Informal",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-2", "act-mc-2"]
+    },
+
+    {
+      "id": "ko-greetings-3",
+      "slug": "ko-greetings-3",
+      "title": "Introducing Yourself",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-3", "act-mc-3"]
+    },
+
+    {
+      "id": "ko-greetings-4",
+      "slug": "ko-greetings-4",
+      "title": "Asking Names",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-4", "act-mc-4"]
+    },
+
+    {
+      "id": "ko-greetings-5",
+      "slug": "ko-greetings-5",
+      "title": "Polite Expressions",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-5", "act-mc-5"]
+    },
+
+    {
+      "id": "ko-greetings-6",
+      "slug": "ko-greetings-6",
+      "title": "Asking About Well-being",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-6", "act-mc-6"]
+    },
+
+    {
+      "id": "ko-greetings-7",
+      "slug": "ko-greetings-7",
+      "title": "Introducing Family",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-7", "act-mc-7"]
+    },
+
+    {
+      "id": "ko-greetings-8",
+      "slug": "ko-greetings-8",
+      "title": "Useful Daily Phrases",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-8", "act-mc-8"]
+    },
+
+    {
+      "id": "ko-greetings-9",
+      "slug": "ko-greetings-9",
+      "title": "Saying Goodbye",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-9", "act-mc-9"]
+    },
+
+    {
+      "id": "ko-greetings-10",
+      "slug": "ko-greetings-10",
+      "title": "Review: Greetings & Politeness",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": ["act-fc-10", "act-mc-10"]
+    }
+  ],
+  "activities": [
+    { "type": "flashcard", "id": "act-fc-1", "cards": [ { "front": "안녕하세요", "back": "Hello (formal)" }, { "front": "안녕", "back": "Hi / Bye (informal)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-1", "question": "Which phrase is a formal greeting?", "choices": [ { "id": "c1", "text": "안녕하세요", "correct": true }, { "id": "c2", "text": "안녕", "correct": false }, { "id": "c3", "text": "감사합니다", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-2", "cards": [ { "front": "감사합니다", "back": "Thank you (formal)" }, { "front": "고마워", "back": "Thanks (informal)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-2", "question": "Which is informal 'thank you'?", "choices": [ { "id": "c1", "text": "감사합니다", "correct": false }, { "id": "c2", "text": "고마워", "correct": true }, { "id": "c3", "text": "안녕하세요", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-3", "cards": [ { "front": "저는 ... 입니다", "back": "I am ... (formal)" }, { "front": "제 이름은 ... 입니다", "back": "My name is ... (formal)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-3", "question": "How do you say 'My name is ...' formally?", "choices": [ { "id": "c1", "text": "제 이름은 ... 입니다", "correct": true }, { "id": "c2", "text": "내 이름은 ...", "correct": false }, { "id": "c3", "text": "나는 ...", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-4", "cards": [ { "front": "이름이 뭐예요?", "back": "What's your name? (polite)" }, { "front": "성함이 어떻게 되세요?", "back": "What is your name? (honorific)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-4", "question": "Which is a polite way to ask someone's name?", "choices": [ { "id": "c1", "text": "이름이 뭐예요?", "correct": true }, { "id": "c2", "text": "너 이름이 뭐야?", "correct": false }, { "id": "c3", "text": "제 이름은 ... 입니다", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-5", "cards": [ { "front": "죄송합니다", "back": "I'm sorry (formal)" }, { "front": "괜찮아요", "back": "It's okay / No problem" } ] },
+    { "type": "multiple_choice", "id": "act-mc-5", "question": "Which phrase means 'I'm sorry'?", "choices": [ { "id": "c1", "text": "감사합니다", "correct": false }, { "id": "c2", "text": "죄송합니다", "correct": true }, { "id": "c3", "text": "안녕하세요", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-6", "cards": [ { "front": "잘 지내세요?", "back": "How are you? (formal)" }, { "front": "잘 지내", "back": "I'm fine (informal)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-6", "question": "How would you ask 'How are you?' formally?", "choices": [ { "id": "c1", "text": "잘 지내요?", "correct": false }, { "id": "c2", "text": "잘 지내세요?", "correct": true }, { "id": "c3", "text": "어디에 가요?", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-7", "cards": [ { "front": "가족", "back": "Family" }, { "front": "어머니 / 아버지", "back": "Mother / Father" } ] },
+    { "type": "multiple_choice", "id": "act-mc-7", "question": "What does '가족' mean?", "choices": [ { "id": "c1", "text": "Friend", "correct": false }, { "id": "c2", "text": "Family", "correct": true }, { "id": "c3", "text": "House", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-8", "cards": [ { "front": "좋은 아침", "back": "Good morning" }, { "front": "잘 자요", "back": "Good night" } ] },
+    { "type": "multiple_choice", "id": "act-mc-8", "question": "Which phrase is 'Good morning'?", "choices": [ { "id": "c1", "text": "좋은 아침", "correct": true }, { "id": "c2", "text": "잘 자요", "correct": false }, { "id": "c3", "text": "안녕", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-9", "cards": [ { "front": "안녕히 가세요", "back": "Goodbye (to someone leaving)" }, { "front": "안녕히 계세요", "back": "Goodbye (to someone staying)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-9", "question": "Which is said to someone leaving?", "choices": [ { "id": "c1", "text": "안녕히 가세요", "correct": true }, { "id": "c2", "text": "안녕히 계세요", "correct": false }, { "id": "c3", "text": "감사합니다", "correct": false } ] },
+
+    { "type": "flashcard", "id": "act-fc-10", "cards": [ { "front": "안녕하세요 / 안녕", "back": "Hello (formal/informal)" }, { "front": "감사합니다 / 고마워", "back": "Thank you (formal/informal)" } ] },
+    { "type": "multiple_choice", "id": "act-mc-10", "question": "Which pair is a formal and informal greeting?", "choices": [ { "id": "c1", "text": "안녕하세요 / 안녕", "correct": true }, { "id": "c2", "text": "감사합니다 / 고마워", "correct": false }, { "id": "c3", "text": "안녕히 가세요 / 안녕히 계세요", "correct": false } ] }
+  ]
+}
