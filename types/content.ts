@@ -7,6 +7,47 @@ export type EntityType =
   | 'module'
   | 'lesson';
 
+export type LessonSection =
+  | 'learn'
+  | 'vocabulary'
+  | 'grammar'
+  | 'pronunciation'
+  | 'dialogue'
+  | 'reading'
+  | 'practice'
+  | 'quiz'
+  | 'review'
+  | 'completion';
+
+export interface TrackMetadata {
+  kind: 'curriculum-track';
+  vietnameseLabel: string;
+  goal: string;
+  audience: string;
+}
+
+export interface LessonMetadata {
+  track: string;
+  lessonNumber: number;
+  stage?: string;
+  stageOrder?: number;
+  description?: string;
+  objectives?: string[];
+  prerequisites?: string[];
+  estimatedMinutes?: number;
+  sections?: LessonSection[];
+  tags?: string[];
+}
+
+export type EntityMetadata = TrackMetadata | LessonMetadata | Record<string, unknown>;
+
+export function isTrackMetadata(metadata: EntityMetadata | undefined): metadata is TrackMetadata {
+  return typeof metadata === 'object'
+    && metadata !== null
+    && 'kind' in metadata
+    && metadata.kind === 'curriculum-track';
+}
+
 export interface EntityBase {
   id: string;
   slug: string;
@@ -15,7 +56,7 @@ export interface EntityBase {
   type: EntityType;
   parentId?: string;
   order?: number;
-  meta?: unknown;
+  meta?: EntityMetadata;
 }
 
 export interface CourseWithModules extends EntityBase {
@@ -31,6 +72,7 @@ export interface Lesson extends EntityBase {
   type: 'lesson';
   activities?: string[];
   contentPath?: string;
+  meta?: LessonMetadata;
 }
 
 export type FlashcardActivity = {

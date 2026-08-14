@@ -185,6 +185,36 @@
       "parentId": "goal-ko-beginner"
     },
     {
+      "id": "track-ko-korean-path",
+      "slug": "korean-path",
+      "title": "Korean Path",
+      "language": "ko",
+      "type": "course",
+      "order": 3,
+      "parentId": "lang-ko",
+      "meta": {
+        "kind": "curriculum-track",
+        "vietnameseLabel": "Phổ cập vào lớp 10",
+        "goal": "Nền tảng tiếng Hàn cho học sinh Việt Nam, hướng tới lộ trình thi vào lớp 10.",
+        "audience": "Học sinh Việt Nam tuổi học đường"
+      }
+    },
+    {
+      "id": "track-ko-korean-challenge",
+      "slug": "korean-challenge",
+      "title": "Korean Challenge",
+      "language": "ko",
+      "type": "course",
+      "order": 4,
+      "parentId": "lang-ko",
+      "meta": {
+        "kind": "curriculum-track",
+        "vietnameseLabel": "Chuyên sâu, chinh phục Hàn Quốc",
+        "goal": "Nâng cao năng lực tiếng Hàn và mở rộng mục tiêu học tập dài hạn liên quan đến Hàn Quốc.",
+        "audience": "Học sinh tuổi học đường muốn học vượt lộ trình phổ cập"
+      }
+    },
+    {
       "id": "module-ko-hangul-1",
       "slug": "module-1-hangul-basics",
       "title": "Module 1: Hangul Basics & Consonants",

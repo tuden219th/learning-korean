@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import type { Catalog, Activity, EntityBase } from '../types/content';
+import type { Catalog, Activity, EntityBase, LessonMetadata } from '../types/content';
 
 const CATALOG_PATH = path.join(process.cwd(), 'content', 'catalog.json');
 
@@ -21,7 +21,23 @@ export function getEntity(id: string): EntityBase | undefined {
 }
 
 export function getChildren(parentId: string): EntityBase[] {
-  return loadCatalog().entities.filter((e) => e.parentId === parentId);
+  return loadCatalog()
+    .entities
+    .filter((entity) => entity.parentId === parentId)
+    .sort((a, b) => getEntityOrder(a) - getEntityOrder(b));
+}
+
+function getEntityOrder(entity: EntityBase): number {
+  if (typeof entity.order === 'number') return entity.order;
+  if (isLessonMetadata(entity.meta)) return entity.meta.lessonNumber;
+  return Number.MAX_SAFE_INTEGER;
+}
+
+function isLessonMetadata(metadata: EntityBase['meta']): metadata is LessonMetadata {
+  return typeof metadata === 'object'
+    && metadata !== null
+    && 'lessonNumber' in metadata
+    && typeof metadata.lessonNumber === 'number';
 }
 
 export function getLanguages(): EntityBase[] {

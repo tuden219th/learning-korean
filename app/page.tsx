@@ -1,12 +1,10 @@
-import Link from "next/link";
 import CourseCard from "../components/CourseCard";
 import Hero from "../components/Hero";
 import LearningProgress from "../components/LearningProgress";
-import type { CourseWithModules } from "../types/content";
+import { isTrackMetadata, type CourseWithModules } from "../types/content";
 
 export default async function Home() {
-  const { getEntity, getChildren, getCatalog } = await import("../lib/content");
-  const lang = getEntity("lang-ko");
+  const { getChildren, getCatalog } = await import("../lib/content");
 
   const catalog = getCatalog();
   const courses = catalog.entities
@@ -20,11 +18,13 @@ export default async function Home() {
         const lessons = getChildren(m.id) || [];
         return { ...m, lessons };
       })
-      .filter((m: any) => (m.lessons || []).length > 0);
+      .filter((module) => module.lessons.length > 0);
     return { ...c, type: "course", modules: modulesWithLessons };
   }
 
-  const visibleCourses = courses.map(buildCourseTree).filter((course) => course.modules.length > 0);
+  const visibleCourses = courses
+    .map(buildCourseTree)
+    .filter((course) => course.modules.length > 0 || isTrackMetadata(course.meta));
 
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">

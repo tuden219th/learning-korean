@@ -1,16 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
+import { isTrackMetadata } from '../../types/content';
 
 export default async function LanguageLayout({ children, params }: any) {
   const resolvedParams = await params;
   const language = resolvedParams?.language ?? 'unknown';
 
-  const { getChildren, getEntity, getCatalog } = await import('../../lib/content');
+  const { getChildren, getCatalog } = await import('../../lib/content');
 
   // find courses for this language that have modules with lessons
   const catalog = getCatalog();
-  const courses = catalog.entities.filter((e: any) => e.type === 'course' && e.language === language);
+  const courses = catalog.entities
+    .filter((entity) => entity.type === 'course' && entity.language === language)
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 
   const visibleCourses = courses.map((c: any) => {
     const modules = getChildren(c.id) || [];
@@ -19,9 +22,9 @@ export default async function LanguageLayout({ children, params }: any) {
         const lessons = getChildren(m.id) || [];
         return { ...m, lessons };
       })
-      .filter((m: any) => (m.lessons || []).length > 0);
+      .filter((module: any) => module.lessons.length > 0);
     return { ...c, modules: modulesWithLessons };
-  }).filter((c: any) => (c.modules || []).length > 0);
+  }).filter((course: any) => course.modules.length > 0 || isTrackMetadata(course.meta));
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
@@ -31,14 +34,3 @@ export default async function LanguageLayout({ children, params }: any) {
   );
 }
 
-function getBreadcrumbPath(entity: any, getEntityFn: (id: string) => any) {
-  // build slug path from language down to the entity
-  const parts: string[] = [];
-  let node: any = entity;
-  while (node) {
-    if (node.slug) parts.push(node.slug);
-    if (!node.parentId) break;
-    node = getEntityFn(node.parentId as string);
-  }
-  return parts.reverse().join('/');
-}
