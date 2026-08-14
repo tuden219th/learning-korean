@@ -1,0 +1,10 @@
+[
+  {
+    "id": "path-ko-greetings",
+    "slug": "greetings",
+    "title": "Greetings",
+    "language": "ko",
+    "type": "path",
+    "parentId": "goal-ko-beginner"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "entities": {
+    "languages": "./entities/languages.json",
+    "goals": "./entities/goals.json",
+    "paths": "./entities/paths.json",
+    "levels": "./entities/levels.json",
+    "courses": "./entities/courses.json",
+    "modules": "./entities/modules.json"
+  },
+  "lessons": {
+    "greetings-basics": "./lessons/greetings-basics.json",
+    "hangul-foundation": "./lessons/hangul-foundation.json"
+  },
+  "activities": {
+    "greetings": "./activities/greetings.json",
+    "hangul-foundation": "./activities/hangul-foundation.json"
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "goal-ko-beginner",
+    "slug": "beginner",
+    "title": "Beginner",
+    "language": "ko",
+    "type": "goal",
+    "parentId": "lang-ko"
+  }
+]

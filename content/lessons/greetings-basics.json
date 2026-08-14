@@ -1,0 +1,133 @@
+{
+  "course": {
+    "id": "course-ko-greetings-basics",
+    "slug": "greetings-basics",
+    "title": "Greetings Basics",
+    "language": "ko",
+    "type": "course",
+    "order": 2,
+    "parentId": "level-ko-1"
+  },
+  "lessons": [
+    {
+      "id": "ko-greetings-1",
+      "slug": "ko-greetings-1",
+      "title": "Basic greetings",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-1",
+        "act-mc-1"
+      ]
+    },
+    {
+      "id": "ko-greetings-2",
+      "slug": "ko-greetings-2",
+      "title": "Formal vs Informal",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-2",
+        "act-mc-2"
+      ]
+    },
+    {
+      "id": "ko-greetings-3",
+      "slug": "ko-greetings-3",
+      "title": "Introducing Yourself",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-3",
+        "act-mc-3"
+      ]
+    },
+    {
+      "id": "ko-greetings-4",
+      "slug": "ko-greetings-4",
+      "title": "Asking Names",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-4",
+        "act-mc-4"
+      ]
+    },
+    {
+      "id": "ko-greetings-5",
+      "slug": "ko-greetings-5",
+      "title": "Polite Expressions",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-5",
+        "act-mc-5"
+      ]
+    },
+    {
+      "id": "ko-greetings-6",
+      "slug": "ko-greetings-6",
+      "title": "Asking About Well-being",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-6",
+        "act-mc-6"
+      ]
+    },
+    {
+      "id": "ko-greetings-7",
+      "slug": "ko-greetings-7",
+      "title": "Introducing Family",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-7",
+        "act-mc-7"
+      ]
+    },
+    {
+      "id": "ko-greetings-8",
+      "slug": "ko-greetings-8",
+      "title": "Useful Daily Phrases",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-8",
+        "act-mc-8"
+      ]
+    },
+    {
+      "id": "ko-greetings-9",
+      "slug": "ko-greetings-9",
+      "title": "Saying Goodbye",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-9",
+        "act-mc-9"
+      ]
+    },
+    {
+      "id": "ko-greetings-10",
+      "slug": "ko-greetings-10",
+      "title": "Review: Greetings & Politeness",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-greetings",
+      "activities": [
+        "act-fc-10",
+        "act-mc-10"
+      ]
+    }
+  ]
+}

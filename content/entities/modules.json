@@ -1,0 +1,46 @@
+[
+  {
+    "id": "module-ko-greetings",
+    "slug": "greetings",
+    "title": "Greetings",
+    "language": "ko",
+    "type": "module",
+    "parentId": "course-ko-greetings-basics"
+  },
+  {
+    "id": "module-ko-hangul-1",
+    "slug": "module-1-hangul-basics",
+    "title": "Module 1: Hangul Basics & Consonants",
+    "language": "ko",
+    "type": "module",
+    "order": 1,
+    "parentId": "course-ko-hangul-foundation"
+  },
+  {
+    "id": "module-ko-hangul-2",
+    "slug": "module-2-basic-vowels",
+    "title": "Module 2: Basic Vowels",
+    "language": "ko",
+    "type": "module",
+    "order": 2,
+    "parentId": "course-ko-hangul-foundation"
+  },
+  {
+    "id": "module-ko-hangul-3",
+    "slug": "module-3-syllable-building",
+    "title": "Module 3: Building Syllables",
+    "language": "ko",
+    "type": "module",
+    "order": 3,
+    "parentId": "course-ko-hangul-foundation"
+  },
+  {
+    "id": "module-ko-hangul-4",
+    "slug": "module-4-batchim-basics",
+    "title": "Module 4: Final Consonants (Batchim)",
+    "language": "ko",
+    "type": "module",
+    "order": 4,
+    "parentId": "course-ko-hangul-foundation"
+  }
+]

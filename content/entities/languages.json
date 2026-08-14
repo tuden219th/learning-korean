@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lang-en",
+    "slug": "en",
+    "title": "English",
+    "language": "en",
+    "type": "language"
+  },
+  {
+    "id": "lang-ko",
+    "slug": "ko",
+    "title": "Korean",
+    "language": "ko",
+    "type": "language"
+  },
+  {
+    "id": "lang-fr",
+    "slug": "fr",
+    "title": "French",
+    "language": "fr",
+    "type": "language"
+  },
+  {
+    "id": "lang-vi",
+    "slug": "vi",
+    "title": "Vietnamese",
+    "language": "vi",
+    "type": "language"
+  }
+]

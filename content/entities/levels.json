@@ -1,0 +1,10 @@
+[
+  {
+    "id": "level-ko-1",
+    "slug": "level-1",
+    "title": "Level 1",
+    "language": "ko",
+    "type": "level",
+    "parentId": "path-ko-greetings"
+  }
+]

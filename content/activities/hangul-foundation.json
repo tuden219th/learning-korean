@@ -1,0 +1,616 @@
+[
+  {
+    "type": "flashcard",
+    "id": "act-fc-h1-1",
+    "cards": [
+      {
+        "front": "한글",
+        "back": "Hangul — the Korean writing system"
+      },
+      {
+        "front": "가",
+        "back": "One syllable block: a consonant and a vowel are written together"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h1-1",
+    "question": "In the syllable 가, which part is the consonant?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㄱ",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㅏ",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "가",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h1-2",
+    "cards": [
+      {
+        "front": "ㄱ",
+        "back": "giyeok — a soft g/k sound"
+      },
+      {
+        "front": "ㄴ",
+        "back": "nieun — n"
+      },
+      {
+        "front": "ㄷ",
+        "back": "digeut — a soft d/t sound"
+      },
+      {
+        "front": "ㄹ",
+        "back": "rieul — between r and l"
+      },
+      {
+        "front": "ㅁ",
+        "back": "mieum — m"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h1-2",
+    "question": "Which letter makes an m sound?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㅁ",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㄴ",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "ㄹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h1-3",
+    "cards": [
+      {
+        "front": "ㅂ",
+        "back": "bieup — a soft b/p sound"
+      },
+      {
+        "front": "ㅅ",
+        "back": "siot — s"
+      },
+      {
+        "front": "ㅇ",
+        "back": "silent at the start; ng at the end"
+      },
+      {
+        "front": "ㅈ",
+        "back": "jieut — j"
+      },
+      {
+        "front": "ㅎ",
+        "back": "hieut — h"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h1-3",
+    "question": "Which consonant is silent at the beginning of a syllable?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㅇ",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㅎ",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "ㅅ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h1-4",
+    "cards": [
+      {
+        "front": "ㄱ",
+        "back": "g/k"
+      },
+      {
+        "front": "ㅁ",
+        "back": "m"
+      },
+      {
+        "front": "ㅇ",
+        "back": "silent at the start"
+      },
+      {
+        "front": "ㅎ",
+        "back": "h"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h1-4",
+    "question": "Which pair is matched correctly?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㄴ — n",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㅁ — h",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "ㅈ — m",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h2-1",
+    "cards": [
+      {
+        "front": "ㅏ",
+        "back": "a — as in 가 (ga)"
+      },
+      {
+        "front": "ㅓ",
+        "back": "eo — as in 거 (geo)"
+      },
+      {
+        "front": "ㅗ",
+        "back": "o — as in 고 (go)"
+      },
+      {
+        "front": "ㅜ",
+        "back": "u — as in 구 (gu)"
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h2-2",
+    "cards": [
+      {
+        "front": "ㅑ",
+        "back": "ya — as in 갸 (gya)"
+      },
+      {
+        "front": "ㅕ",
+        "back": "yeo — as in 겨 (gyeo)"
+      },
+      {
+        "front": "ㅛ",
+        "back": "yo — as in 교 (gyo)"
+      },
+      {
+        "front": "ㅠ",
+        "back": "yu — as in 규 (gyu)"
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h2-3",
+    "cards": [
+      {
+        "front": "ㅐ",
+        "back": "ae — as in 배 (bae)"
+      },
+      {
+        "front": "ㅔ",
+        "back": "e — as in 세 (se)"
+      },
+      {
+        "front": "ㅘ",
+        "back": "wa — as in 과 (gwa)"
+      },
+      {
+        "front": "ㅚ",
+        "back": "oe — as in 괴 (goe)"
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h2-4",
+    "cards": [
+      {
+        "front": "ㅏ vs ㅓ",
+        "back": "Practice distinguishing ㅏ (a) and ㅓ (eo)"
+      },
+      {
+        "front": "ㅗ vs ㅜ",
+        "back": "Practice distinguishing ㅗ (o) and ㅜ (u)"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h2-4",
+    "question": "Which syllable contains the vowel ㅕ?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "가",
+        "correct": false
+      },
+      {
+        "id": "c2",
+        "text": "겨",
+        "correct": true
+      },
+      {
+        "id": "c3",
+        "text": "교",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h3-1",
+    "cards": [
+      {
+        "front": "ㄱ + ㅏ = 가",
+        "back": "The vowel ㅏ stands to the right of the consonant"
+      },
+      {
+        "front": "ㄴ + ㅓ = 너",
+        "back": "The vowel ㅓ also makes a side-by-side block"
+      },
+      {
+        "front": "ㅁ + ㅣ = 미",
+        "back": "The vowel ㅣ stands to the right"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h3-1",
+    "question": "Which syllable is made from ㄴ + ㅏ?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "나",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "노",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "누",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h3-2",
+    "cards": [
+      {
+        "front": "ㄱ + ㅗ = 고",
+        "back": "The vowel ㅗ goes below the consonant"
+      },
+      {
+        "front": "ㄴ + ㅜ = 누",
+        "back": "The vowel ㅜ also makes a top-to-bottom block"
+      },
+      {
+        "front": "ㅁ + ㅡ = 므",
+        "back": "The vowel ㅡ goes below"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h3-2",
+    "question": "Which vowel is placed below the consonant in 고?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㅗ",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㅏ",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "ㅣ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h3-3",
+    "cards": [
+      {
+        "front": "가",
+        "back": "ga"
+      },
+      {
+        "front": "너",
+        "back": "neo"
+      },
+      {
+        "front": "무",
+        "back": "mu"
+      },
+      {
+        "front": "지",
+        "back": "ji"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h3-3",
+    "question": "How do you read 무?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "mu",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "mi",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "mo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h3-4",
+    "cards": [
+      {
+        "front": "나",
+        "back": "ㄴ + ㅏ"
+      },
+      {
+        "front": "고",
+        "back": "ㄱ + ㅗ"
+      },
+      {
+        "front": "수",
+        "back": "ㅅ + ㅜ"
+      },
+      {
+        "front": "미",
+        "back": "ㅁ + ㅣ"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h3-4",
+    "question": "Which block is written top to bottom?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "고",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "가",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "너",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h4-1",
+    "cards": [
+      {
+        "front": "가",
+        "back": "An open syllable: no final consonant"
+      },
+      {
+        "front": "각",
+        "back": "A closed syllable: ㄱ is the final consonant (batchim)"
+      },
+      {
+        "front": "밥",
+        "back": "ㅂ sits at the bottom as a final consonant"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h4-1",
+    "question": "Where does a final consonant appear in a syllable block?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "At the bottom",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "Only on the right",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "Only at the top",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h4-2",
+    "cards": [
+      {
+        "front": "안",
+        "back": "ㄴ at the end: an"
+      },
+      {
+        "front": "말",
+        "back": "ㄹ at the end: mal"
+      },
+      {
+        "front": "감",
+        "back": "ㅁ at the end: gam"
+      },
+      {
+        "front": "공",
+        "back": "ㅇ at the end: gong"
+      },
+      {
+        "front": "각",
+        "back": "ㄱ at the end: gak"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h4-2",
+    "question": "Which final consonant makes an ng sound in 공?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "ㅇ",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "ㄴ",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "ㅁ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h4-3",
+    "cards": [
+      {
+        "front": "옷",
+        "back": "ㅅ is written at the end, but the final sound is a short t"
+      },
+      {
+        "front": "밭",
+        "back": "ㅌ at the end also has a short t sound"
+      },
+      {
+        "front": "밥",
+        "back": "ㅂ at the end has a closed p sound"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h4-3",
+    "question": "Which syllable ends with the closed p sound?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "밥",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "안",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "공",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "type": "flashcard",
+    "id": "act-fc-h4-4",
+    "cards": [
+      {
+        "front": "가 / 각",
+        "back": "Open syllable / syllable with final ㄱ"
+      },
+      {
+        "front": "나 / 난",
+        "back": "Open syllable / syllable with final ㄴ"
+      },
+      {
+        "front": "무 / 문",
+        "back": "Open syllable / syllable with final ㄴ"
+      }
+    ]
+  },
+  {
+    "type": "multiple_choice",
+    "id": "act-mc-h4-4",
+    "question": "Which syllable has no final consonant?",
+    "choices": [
+      {
+        "id": "c1",
+        "text": "가",
+        "correct": true
+      },
+      {
+        "id": "c2",
+        "text": "각",
+        "correct": false
+      },
+      {
+        "id": "c3",
+        "text": "안",
+        "correct": false
+      }
+    ]
+  }
+]

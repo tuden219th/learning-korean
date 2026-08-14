@@ -1,0 +1,311 @@
+[
+  {
+    "id": "ko-greetings-1",
+    "slug": "ko-greetings-1",
+    "title": "Basic greetings",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-1",
+      "act-mc-1"
+    ]
+  },
+  {
+    "id": "ko-greetings-2",
+    "slug": "ko-greetings-2",
+    "title": "Formal vs Informal",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-2",
+      "act-mc-2"
+    ]
+  },
+  {
+    "id": "ko-greetings-3",
+    "slug": "ko-greetings-3",
+    "title": "Introducing Yourself",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-3",
+      "act-mc-3"
+    ]
+  },
+  {
+    "id": "ko-greetings-4",
+    "slug": "ko-greetings-4",
+    "title": "Asking Names",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-4",
+      "act-mc-4"
+    ]
+  },
+  {
+    "id": "ko-greetings-5",
+    "slug": "ko-greetings-5",
+    "title": "Polite Expressions",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-5",
+      "act-mc-5"
+    ]
+  },
+  {
+    "id": "ko-greetings-6",
+    "slug": "ko-greetings-6",
+    "title": "Asking About Well-being",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-6",
+      "act-mc-6"
+    ]
+  },
+  {
+    "id": "ko-greetings-7",
+    "slug": "ko-greetings-7",
+    "title": "Introducing Family",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-7",
+      "act-mc-7"
+    ]
+  },
+  {
+    "id": "ko-greetings-8",
+    "slug": "ko-greetings-8",
+    "title": "Useful Daily Phrases",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-8",
+      "act-mc-8"
+    ]
+  },
+  {
+    "id": "ko-greetings-9",
+    "slug": "ko-greetings-9",
+    "title": "Saying Goodbye",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-9",
+      "act-mc-9"
+    ]
+  },
+  {
+    "id": "ko-greetings-10",
+    "slug": "ko-greetings-10",
+    "title": "Review: Greetings & Politeness",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-greetings",
+    "activities": [
+      "act-fc-10",
+      "act-mc-10"
+    ]
+  },
+  {
+    "id": "ko-hangul-1-1",
+    "slug": "ko-hangul-1-1",
+    "title": "Hangul: Letters Become Syllable Blocks",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-1",
+    "activities": [
+      "act-fc-h1-1",
+      "act-mc-h1-1"
+    ]
+  },
+  {
+    "id": "ko-hangul-1-2",
+    "slug": "ko-hangul-1-2",
+    "title": "Basic Consonants: ㄱ, ㄴ, ㄷ, ㄹ, ㅁ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-1",
+    "activities": [
+      "act-fc-h1-2",
+      "act-mc-h1-2"
+    ]
+  },
+  {
+    "id": "ko-hangul-1-3",
+    "slug": "ko-hangul-1-3",
+    "title": "Basic Consonants: ㅂ, ㅅ, ㅇ, ㅈ, ㅎ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-1",
+    "activities": [
+      "act-fc-h1-3",
+      "act-mc-h1-3"
+    ]
+  },
+  {
+    "id": "ko-hangul-1-4",
+    "slug": "ko-hangul-1-4",
+    "title": "Review: Recognize Basic Consonants",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-1",
+    "activities": [
+      "act-fc-h1-4",
+      "act-mc-h1-4"
+    ]
+  },
+  {
+    "id": "ko-hangul-2-1",
+    "slug": "ko-hangul-2-1",
+    "title": "Basic Vowels: ㅏ, ㅓ, ㅗ, ㅜ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-2",
+    "activities": [
+      "act-fc-h2-1"
+    ]
+  },
+  {
+    "id": "ko-hangul-2-2",
+    "slug": "ko-hangul-2-2",
+    "title": "Y‑sound Vowels: ㅑ, ㅕ, ㅛ, ㅠ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-2",
+    "activities": [
+      "act-fc-h2-2"
+    ]
+  },
+  {
+    "id": "ko-hangul-2-3",
+    "slug": "ko-hangul-2-3",
+    "title": "Compound Vowels",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-2",
+    "activities": [
+      "act-fc-h2-3"
+    ]
+  },
+  {
+    "id": "ko-hangul-2-4",
+    "slug": "ko-hangul-2-4",
+    "title": "Vowel Practice & Mini Quiz",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-2",
+    "activities": [
+      "act-fc-h2-4",
+      "act-mc-h2-4"
+    ]
+  },
+  {
+    "id": "ko-hangul-3-1",
+    "slug": "ko-hangul-3-1",
+    "title": "Vertical Vowels: Build Blocks Side by Side",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-3",
+    "activities": [
+      "act-fc-h3-1",
+      "act-mc-h3-1"
+    ]
+  },
+  {
+    "id": "ko-hangul-3-2",
+    "slug": "ko-hangul-3-2",
+    "title": "Horizontal Vowels: Build Blocks Top to Bottom",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-3",
+    "activities": [
+      "act-fc-h3-2",
+      "act-mc-h3-2"
+    ]
+  },
+  {
+    "id": "ko-hangul-3-3",
+    "slug": "ko-hangul-3-3",
+    "title": "Read Simple Syllables",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-3",
+    "activities": [
+      "act-fc-h3-3",
+      "act-mc-h3-3"
+    ]
+  },
+  {
+    "id": "ko-hangul-3-4",
+    "slug": "ko-hangul-3-4",
+    "title": "Review: Build and Read Syllables",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-3",
+    "activities": [
+      "act-fc-h3-4",
+      "act-mc-h3-4"
+    ]
+  },
+  {
+    "id": "ko-hangul-4-1",
+    "slug": "ko-hangul-4-1",
+    "title": "What Is a Final Consonant?",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-4",
+    "activities": [
+      "act-fc-h4-1",
+      "act-mc-h4-1"
+    ]
+  },
+  {
+    "id": "ko-hangul-4-2",
+    "slug": "ko-hangul-4-2",
+    "title": "Common Final Sounds: ㄱ, ㄴ, ㄹ, ㅁ, ㅇ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-4",
+    "activities": [
+      "act-fc-h4-2",
+      "act-mc-h4-2"
+    ]
+  },
+  {
+    "id": "ko-hangul-4-3",
+    "slug": "ko-hangul-4-3",
+    "title": "Closed Final Sounds: ㄷ and ㅂ",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-4",
+    "activities": [
+      "act-fc-h4-3",
+      "act-mc-h4-3"
+    ]
+  },
+  {
+    "id": "ko-hangul-4-4",
+    "slug": "ko-hangul-4-4",
+    "title": "Review: Read Simple Batchim",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "module-ko-hangul-4",
+    "activities": [
+      "act-fc-h4-4",
+      "act-mc-h4-4"
+    ]
+  }
+]
