@@ -2,6 +2,7 @@ import CourseCard from "../components/CourseCard";
 import Hero from "../components/Hero";
 import LearningProgress from "../components/LearningProgress";
 import { isTrackMetadata, type CourseWithModules } from "../types/content";
+import { createWebsiteSchema, createOrganizationSchema } from "../lib/structured-data";
 
 export default async function Home() {
   const { getChildren, getCatalog } = await import("../lib/content");
@@ -26,8 +27,19 @@ export default async function Home() {
     .map(buildCourseTree)
     .filter((course) => course.modules.length > 0 || isTrackMetadata(course.meta));
 
+  const websiteSchema = createWebsiteSchema();
+  const organizationSchema = createOrganizationSchema();
+
   return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <main className="max-w-5xl mx-auto px-4 py-10">
         <Hero />
 

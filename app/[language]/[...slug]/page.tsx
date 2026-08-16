@@ -3,6 +3,8 @@ import { getLessonContent, findEntityBySlug, getEntity, getChildren } from '../.
 import { marked } from 'marked';
 import Activity from '../../../components/MDXComponents';
 import LessonCompletion from '../../../components/LessonCompletion';
+import type { Metadata } from 'next';
+import { createBreadcrumbSchema } from '../../../lib/structured-data';
 
 type Props = {
   params: Promise<{
@@ -10,6 +12,61 @@ type Props = {
     slug?: string[];
   }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolved = await params;
+  const { language, slug } = resolved;
+  const slugArr = slug || [];
+  const entity = findEntityBySlug(language, slugArr);
+
+  if (!entity) {
+    return {
+      title: 'Not Found — Từ Đến',
+      description: 'Page not found',
+    };
+  }
+
+  const title = entity.title;
+  const description = entity.meta && typeof entity.meta === 'object' && 'description' in entity.meta
+    ? (entity.meta.description as string)
+    : `Learn about ${entity.title} with Từ Đến`;
+
+  const url = `https://korean.tudencafe.com/${language}/${slugArr.join('/')}`;
+
+  return {
+    title: `${title} — Từ Đến`,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    robots: {
+      index: entity.type === 'lesson' || entity.type === 'course' || entity.type === 'module',
+      follow: true,
+    },
+    openGraph: {
+      title: `${title} — Từ Đến`,
+      description,
+      url,
+      type: 'article',
+      siteName: 'Từ Đến',
+      locale: 'vi_VN',
+      images: [
+        {
+          url: 'https://korean.tudencafe.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} — Từ Đến`,
+      description,
+      images: ['https://korean.tudencafe.com/og-image.png'],
+    },
+  };
+}
 
 export default async function Page({ params }: Props) {
   const resolved = await params;
@@ -81,8 +138,19 @@ export default async function Page({ params }: Props) {
     const tail = raw.slice(lastIndex);
     if (tail.trim()) parts.push({ type: 'markdown', content: tail });
 
+    // Create breadcrumb schema for SEO
+    const breadcrumbItems = breadcrumb.map((crumb, index) => ({
+      name: crumb.title,
+      url: `https://korean.tudencafe.com/${language}/${breadcrumb.slice(1, index + 1).map((x) => x.slug).join('/')}`,
+    }));
+    const breadcrumbSchema = createBreadcrumbSchema(breadcrumbItems);
+
     return (
       <div className="p-4">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
               <aside className="hidden md:block md:col-span-1">
             <div className="sticky top-4">

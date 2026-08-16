@@ -22,14 +22,28 @@ export const metadata: Metadata = {
   description: "Tài nguyên học tiếng Hàn dành cho Ngọc Diệp — lộ trình ấm áp, bài học ngắn và hoạt động tương tác.",
   applicationName: "Từ Đến",
   metadataBase: new URL("https://korean.tudencafe.com"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-snippet': -1,
+      'max-image-preview': 'large',
+      'max-video-preview': -1,
+    },
+  },
+  alternates: {
+    canonical: "https://korean.tudencafe.com",
+  },
   openGraph: {
     title: "Từ Đến — Học tiếng Hàn cho Ngọc Diệp",
     description: "Tài nguyên học tiếng Hàn dành cho Ngọc Diệp — lộ trình ấm áp, bài học ngắn và hoạt động tương tác.",
-    url: "http://localhost:3000",
+    url: "https://korean.tudencafe.com",
     siteName: "Từ Đến",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://korean.tudencafe.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Từ Đến — Học tiếng Hàn cho Ngọc Diệp"
@@ -38,13 +52,14 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     type: "website",
   },
-    twitter: {
+  twitter: {
     card: "summary_large_image",
     title: "Từ Đến — Học tiếng Hàn cho Ngọc Diệp",
     description: "Tài nguyên học tiếng Hàn dành cho Ngọc Diệp — lộ trình ấm áp, bài học ngắn và hoạt động tương tác.",
-    images: ["/og-image.png"]
+    images: ["https://korean.tudencafe.com/og-image.png"],
+    creator: "@tudencafe",
   },
-    icons: {
+  icons: {
     icon: [
       { url: "/logo.svg", type: "image/svg+xml" }
     ],

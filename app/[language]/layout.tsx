@@ -1,9 +1,43 @@
 import React from 'react';
-import Link from 'next/link';
 import Header from '../../components/Header';
 import { isTrackMetadata } from '../../types/content';
+import type { Metadata } from 'next';
+import { getCatalog } from '../../lib/content';
 
-export default async function LanguageLayout({ children, params }: any) {
+type Props = {
+  params: Promise<{ language: string }>;
+  children: React.ReactNode;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const language = resolvedParams?.language ?? 'unknown';
+
+  const catalog = getCatalog();
+  const langEntity = catalog.entities.find(
+    (e) => e.type === 'language' && e.slug === language
+  );
+
+  const langTitle = langEntity?.title || language.toUpperCase();
+  const url = `https://korean.tudencafe.com/${language}`;
+
+  return {
+    title: `${langTitle} Learning Path — Từ Đến`,
+    description: `Learn ${langTitle} with Từ Đến's structured curriculum and interactive lessons.`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${langTitle} Learning Path — Từ Đến`,
+      description: `Learn ${langTitle} with Từ Đến's structured curriculum and interactive lessons.`,
+      url,
+      type: 'website',
+      siteName: 'Từ Đến',
+    },
+  };
+}
+
+export default async function LanguageLayout({ children, params }: Props) {
   const resolvedParams = await params;
   const language = resolvedParams?.language ?? 'unknown';
 
