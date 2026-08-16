@@ -1,0 +1,960 @@
+﻿{
+    "activities":  [
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-1-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "이/가",
+                                             "back":  "Subject marker particles in Korean"
+                                         },
+                                         {
+                                             "front":  "나이/가 학생입니다",
+                                             "back":  "I (subject marker) (am) a student"
+                                         },
+                                         {
+                                             "front":  "고양이가 예뻐요",
+                                             "back":  "The cat (subject marker) (is) pretty"
+                                         },
+                                         {
+                                             "front":  "주어 (jueŏ)",
+                                             "back":  "Subject (in Korean grammar)"
+                                         },
+                                         {
+                                             "front":  "입자 (ipja)",
+                                             "back":  "Particle (in Korean grammar)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-1-mc",
+                           "question":  "Which is the subject particle in: 나는 학생입니다?",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "는",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "가",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "을",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-2-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "을/를",
+                                             "back":  "Object marker particles in Korean"
+                                         },
+                                         {
+                                             "front":  "나는 밥을 먹어요",
+                                             "back":  "I eat rice (밥=rice, 을=object marker)"
+                                         },
+                                         {
+                                             "front":  "책을 읽어요",
+                                             "back":  "Read a book (책=book, 을=object marker)"
+                                         },
+                                         {
+                                             "front":  "목적어 (mokjeok-ŏ)",
+                                             "back":  "Object (in Korean grammar)"
+                                         },
+                                         {
+                                             "front":  "밥을 vs 물을 vs 책을",
+                                             "back":  "Words ending in consonants take 을"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-2-mc",
+                           "question":  "Choose the sentence with correct object particle:",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "나는 밥을 먹어요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "나는 밥을 가요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "나는 밥이 먹어요",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-3-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "에",
+                                             "back":  "Destination or location where something is (static)"
+                                         },
+                                         {
+                                             "front":  "에서",
+                                             "back":  "Location where an action occurs (dynamic)"
+                                         },
+                                         {
+                                             "front":  "학교에 가요",
+                                             "back":  "Go to school (에 = destination)"
+                                         },
+                                         {
+                                             "front":  "학교에서 공부해요",
+                                             "back":  "Study at school (에서 = location of action)"
+                                         },
+                                         {
+                                             "front":  "집에 있어요",
+                                             "back":  "Am at home (에 = static location)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-3-mc",
+                           "question":  "Which particle completes: 나는 한국에 (?) 살아요 (live)?",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "에",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "에서",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "을",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-4-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "-아요",
+                                             "back":  "Casual polite ending for verbs with ㅏ or ㅗ vowels"
+                                         },
+                                         {
+                                             "front":  "-어요",
+                                             "back":  "Casual polite ending for verbs with other vowels"
+                                         },
+                                         {
+                                             "front":  "가다 → 가요",
+                                             "back":  "go → (goes) (has ㅏ vowel)"
+                                         },
+                                         {
+                                             "front":  "먹다 → 먹어요",
+                                             "back":  "eat → (eats) (has ㅓ vowel)"
+                                         },
+                                         {
+                                             "front":  "하다 → 해요",
+                                             "back":  "do → (does) (special case)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-4-mc",
+                           "question":  "Conjugate 읽다 (read) in -어요 form:",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "읽아요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "읽어요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "읽습니다",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-5-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "하다 (하다 → 해요)",
+                                             "back":  "do/make (most common verb stem)"
+                                         },
+                                         {
+                                             "front":  "가다 (가다 → 가요)",
+                                             "back":  "go"
+                                         },
+                                         {
+                                             "front":  "오다 (오다 → 와요)",
+                                             "back":  "come"
+                                         },
+                                         {
+                                             "front":  "있다 (있다 → 있어요)",
+                                             "back":  "exist/have (important for possession)"
+                                         },
+                                         {
+                                             "front":  "없다 (없다 → 없어요)",
+                                             "back":  "not exist/don\u0027t have (negation)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-5-mc",
+                           "question":  "How do you say \u0027I have a pencil\u0027 in Korean?",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "나는 연필이 있어요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "나는 연필을 있어요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "나는 연필을 없어요",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-6-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "-습니다",
+                                             "back":  "Formal polite ending (official/textbook Korean)"
+                                         },
+                                         {
+                                             "front":  "가다 → 갑니다",
+                                             "back":  "go → (goes) formal"
+                                         },
+                                         {
+                                             "front":  "먹다 → 먹습니다",
+                                             "back":  "eat → (eats) formal"
+                                         },
+                                         {
+                                             "front":  "공부하다 → 공부합니다",
+                                             "back":  "study → (studies) formal"
+                                         },
+                                         {
+                                             "front":  "-아요 vs -습니다",
+                                             "back":  "casual polite (everyday) vs formal polite (official)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-6-mc",
+                           "question":  "Which form is used in Grade 10 exam texts?",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "-아요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "-어요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "-습니다",
+                                               "correct":  true
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-7-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "안 + verb",
+                                             "back":  "Negation meaning \u0027don\u0027t/won\u0027t\u0027 (refusal/choice)"
+                                         },
+                                         {
+                                             "front":  "나는 밥을 안 먹어요",
+                                             "back":  "I don\u0027t eat rice (choice)"
+                                         },
+                                         {
+                                             "front":  "안 간다",
+                                             "back":  "Won\u0027t go (refusal)"
+                                         },
+                                         {
+                                             "front":  "안 = choice/refusal",
+                                             "back":  "I choose not to; I refuse to"
+                                         },
+                                         {
+                                             "front":  "안 vs 못",
+                                             "back":  "안 = refusal; 못 = inability"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-7-mc",
+                           "question":  "Fill in: 나는 한국어를 () 말해요 (I don\u0027t speak Korean - by choice)",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "안",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "못",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "없이",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-8-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "못 + verb",
+                                             "back":  "Negation meaning \u0027cannot\u0027 (inability/lack of opportunity)"
+                                         },
+                                         {
+                                             "front":  "나는 한국어를 못 말해요",
+                                             "back":  "I cannot speak Korean (no ability)"
+                                         },
+                                         {
+                                             "front":  "못 간다",
+                                             "back":  "Cannot go (unable)"
+                                         },
+                                         {
+                                             "front":  "못 = inability",
+                                             "back":  "I lack ability; circumstances prevent me"
+                                         },
+                                         {
+                                             "front":  "Tiếng Việt: không thể vs không muốn",
+                                             "back":  "못 = cannot (no ability); 안 = don\u0027t want (choice)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-8-mc",
+                           "question":  "Which sentence is correct? (I cannot go to school because I\u0027m sick)",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "나는 학교에 안 가요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "나는 학교에 못 가요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "나는 학교에 가요",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-9-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "-(으)세요",
+                                             "back":  "Polite imperative/request ending"
+                                         },
+                                         {
+                                             "front":  "앉으세요",
+                                             "back":  "Please sit (앉다=sit)"
+                                         },
+                                         {
+                                             "front":  "가세요",
+                                             "back":  "Please go (가다=go)"
+                                         },
+                                         {
+                                             "front":  "봐세요",
+                                             "back":  "Please look (보다=look)"
+                                         },
+                                         {
+                                             "front":  "-(으)세요 = polite command",
+                                             "back":  "Safer than direct command; used in requests"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-9-mc",
+                           "question":  "How would you politely ask someone to eat? (먹다=eat)",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "먹어요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "먹으세요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "먹습니다",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-10-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "-다",
+                                             "back":  "Dictionary form (citation form) of verbs"
+                                         },
+                                         {
+                                             "front":  "가다",
+                                             "back":  "Dictionary form of \u0027go\u0027"
+                                         },
+                                         {
+                                             "front":  "먹다",
+                                             "back":  "Dictionary form of \u0027eat\u0027"
+                                         },
+                                         {
+                                             "front":  "공부하다",
+                                             "back":  "Dictionary form of \u0027study\u0027"
+                                         },
+                                         {
+                                             "front":  "-다 = not used in speech",
+                                             "back":  "Found in dictionaries and written texts only"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-10-mc",
+                           "question":  "What does the -다 form indicate?",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "Past tense",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "Dictionary form",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "Formal polite",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-11-mc",
+                           "question":  "Choose the complete, grammatically correct sentence:",
+                           "choices":  [
+                                           {
+                                               "id":  "c1",
+                                               "text":  "나는 학교에 가요",
+                                               "correct":  true
+                                           },
+                                           {
+                                               "id":  "c2",
+                                               "text":  "나가 학교를 가요",
+                                               "correct":  false
+                                           },
+                                           {
+                                               "id":  "c3",
+                                               "text":  "나를 학교에서 간다",
+                                               "correct":  false
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-1-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "이/가",
+                                             "back":  "Subject marker — marks who or what performs an action"
+                                         },
+                                         {
+                                             "front":  "학생이 와요.",
+                                             "back":  "The student comes. — 이 marks 학생 as the subject."
+                                         },
+                                         {
+                                             "front":  "비가 와요.",
+                                             "back":  "It rains. — 가 marks 비 as the subject."
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-1-mc",
+                           "question":  "Which particle marks the subject in 학생이 와요?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "이"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "을"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "에"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-2-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "을/를",
+                                             "back":  "Object marker — marks what receives the action"
+                                         },
+                                         {
+                                             "front":  "밥을 먹어요.",
+                                             "back":  "I eat rice. — 을 marks 밥 as the object."
+                                         },
+                                         {
+                                             "front":  "한국어를 공부해요.",
+                                             "back":  "I study Korean. — 를 marks 한국어 as the object."
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-2-mc",
+                           "question":  "Which particle marks the object in 밥을 먹어요?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "을"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "이"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "에서"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-3-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "에",
+                                             "back":  "Marks a destination or a place where something is located"
+                                         },
+                                         {
+                                             "front":  "에서",
+                                             "back":  "Marks the place where an action happens"
+                                         },
+                                         {
+                                             "front":  "학교에 가요.",
+                                             "back":  "I go to school. — 에 marks the destination."
+                                         },
+                                         {
+                                             "front":  "학교에서 공부해요.",
+                                             "back":  "I study at school. — 에서 marks where the action happens."
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-3-mc",
+                           "question":  "Which particle is used in 학교에서 공부해요?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "에서"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "을"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "가"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-4-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "가다 → 가요",
+                                             "back":  "go → go (casual polite)"
+                                         },
+                                         {
+                                             "front":  "먹다 → 먹어요",
+                                             "back":  "eat → eat (casual polite)"
+                                         },
+                                         {
+                                             "front":  "공부하다 → 공부해요",
+                                             "back":  "study → study (casual polite)"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-4-mc",
+                           "question":  "What is the polite present form of 먹다?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "먹어요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "먹습니다"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "먹다요"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-5-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "하다 → 해요",
+                                             "back":  "do → do (casual polite)"
+                                         },
+                                         {
+                                             "front":  "가다 → 가요",
+                                             "back":  "go → go (casual polite)"
+                                         },
+                                         {
+                                             "front":  "오다 → 와요",
+                                             "back":  "come → come (casual polite)"
+                                         },
+                                         {
+                                             "front":  "있다 → 있어요",
+                                             "back":  "exist / have → 있어요"
+                                         },
+                                         {
+                                             "front":  "없다 → 없어요",
+                                             "back":  "not exist / not have → 없어요"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-5-mc",
+                           "question":  "What is the polite present form of 오다?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "와요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "오어요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "옵니다"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-6-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "가다 → 갑니다",
+                                             "back":  "go → formal polite"
+                                         },
+                                         {
+                                             "front":  "먹다 → 먹습니다",
+                                             "back":  "eat → formal polite"
+                                         },
+                                         {
+                                             "front":  "하다 → 합니다",
+                                             "back":  "do → formal polite"
+                                         },
+                                         {
+                                             "front":  "오다 → 옵니다",
+                                             "back":  "come → formal polite"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-6-mc",
+                           "question":  "Which is the formal polite form of 하다?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "합니다"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "하어요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "하다요"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-7-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "안",
+                                             "back":  "Negation marker meaning not / don\u0027t"
+                                         },
+                                         {
+                                             "front":  "안 가요",
+                                             "back":  "don\u0027t go / am not going"
+                                         },
+                                         {
+                                             "front":  "안 먹어요",
+                                             "back":  "don\u0027t eat"
+                                         },
+                                         {
+                                             "front":  "안 공부해요",
+                                             "back":  "don\u0027t study"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-7-mc",
+                           "question":  "Which sentence means \u0027I don\u0027t go to school\u0027?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "나는 학교에 안 가요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "나는 학교에 못 가요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "나는 학교에 가요."
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-8-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "안",
+                                             "back":  "not / don\u0027t — the action is not done"
+                                         },
+                                         {
+                                             "front":  "못",
+                                             "back":  "cannot — the action cannot be done"
+                                         },
+                                         {
+                                             "front":  "안 가요",
+                                             "back":  "I don\u0027t go."
+                                         },
+                                         {
+                                             "front":  "못 가요",
+                                             "back":  "I cannot go."
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-8-mc",
+                           "question":  "You are sick and cannot go to school. Which sentence is correct?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "학교에 못 가요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "학교에 안 가요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "학교에 가요."
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-9-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "가다 → 가세요",
+                                             "back":  "go → please go / go (polite command)"
+                                         },
+                                         {
+                                             "front":  "먹다 → 먹으세요",
+                                             "back":  "eat → please eat"
+                                         },
+                                         {
+                                             "front":  "공부하다 → 공부하세요",
+                                             "back":  "study → please study"
+                                         },
+                                         {
+                                             "front":  "오다 → 오세요",
+                                             "back":  "come → please come"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-9-mc",
+                           "question":  "Which is the polite command \u0027Please go\u0027?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "가세요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "가요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "갑니다"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "flashcard",
+                           "id":  "act-kp-1-10-fc",
+                           "cards":  [
+                                         {
+                                             "front":  "가다",
+                                             "back":  "dictionary form — to go"
+                                         },
+                                         {
+                                             "front":  "먹다",
+                                             "back":  "dictionary form — to eat"
+                                         },
+                                         {
+                                             "front":  "공부하다",
+                                             "back":  "dictionary form — to study"
+                                         },
+                                         {
+                                             "front":  "오다",
+                                             "back":  "dictionary form — to come"
+                                         }
+                                     ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-10-mc",
+                           "question":  "Which word is in dictionary form?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "먹다"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "먹어요"
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "먹습니다"
+                                           }
+                                       ]
+                       },
+                       {
+                           "type":  "multiple_choice",
+                           "id":  "act-kp-1-11-mc",
+                           "question":  "Which sentence is grammatically correct?",
+                           "choices":  [
+                                           {
+                                               "correct":  true,
+                                               "id":  "c1",
+                                               "text":  "저는 학교에서 한국어를 공부해요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c2",
+                                               "text":  "저는 학교를 한국어에 공부해요."
+                                           },
+                                           {
+                                               "correct":  false,
+                                               "id":  "c3",
+                                               "text":  "저는 학교가 한국어를 공부해요."
+                                           }
+                                       ]
+                       }
+                   ]
+}
