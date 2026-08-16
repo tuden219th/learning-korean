@@ -6,10 +6,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-1",
-      "act-mc-1"
-    ]
+    "activities": ["act-fc-1", "act-mc-1"]
   },
   {
     "id": "ko-greetings-2",
@@ -18,10 +15,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-2",
-      "act-mc-2"
-    ]
+    "activities": ["act-fc-2", "act-mc-2"]
   },
   {
     "id": "ko-greetings-3",
@@ -30,10 +24,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-3",
-      "act-mc-3"
-    ]
+    "activities": ["act-fc-3", "act-mc-3"]
   },
   {
     "id": "ko-greetings-4",
@@ -42,10 +33,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-4",
-      "act-mc-4"
-    ]
+    "activities": ["act-fc-4", "act-mc-4"]
   },
   {
     "id": "ko-greetings-5",
@@ -54,10 +42,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-5",
-      "act-mc-5"
-    ]
+    "activities": ["act-fc-5", "act-mc-5"]
   },
   {
     "id": "ko-greetings-6",
@@ -66,10 +51,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-6",
-      "act-mc-6"
-    ]
+    "activities": ["act-fc-6", "act-mc-6"]
   },
   {
     "id": "ko-greetings-7",
@@ -78,10 +60,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-7",
-      "act-mc-7"
-    ]
+    "activities": ["act-fc-7", "act-mc-7"]
   },
   {
     "id": "ko-greetings-8",
@@ -90,10 +69,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-8",
-      "act-mc-8"
-    ]
+    "activities": ["act-fc-8", "act-mc-8"]
   },
   {
     "id": "ko-greetings-9",
@@ -102,10 +78,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-9",
-      "act-mc-9"
-    ]
+    "activities": ["act-fc-9", "act-mc-9"]
   },
   {
     "id": "ko-greetings-10",
@@ -114,11 +87,9 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-greetings",
-    "activities": [
-      "act-fc-10",
-      "act-mc-10"
-    ]
+    "activities": ["act-fc-10", "act-mc-10"]
   },
+
   {
     "id": "ko-hangul-1-1",
     "slug": "ko-hangul-1-1",
@@ -126,10 +97,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-1",
-    "activities": [
-      "act-fc-h1-1",
-      "act-mc-h1-1"
-    ]
+    "activities": ["act-fc-h1-1", "act-mc-h1-1"]
   },
   {
     "id": "ko-hangul-1-2",
@@ -138,10 +106,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-1",
-    "activities": [
-      "act-fc-h1-2",
-      "act-mc-h1-2"
-    ]
+    "activities": ["act-fc-h1-2", "act-mc-h1-2"]
   },
   {
     "id": "ko-hangul-1-3",
@@ -150,10 +115,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-1",
-    "activities": [
-      "act-fc-h1-3",
-      "act-mc-h1-3"
-    ]
+    "activities": ["act-fc-h1-3", "act-mc-h1-3"]
   },
   {
     "id": "ko-hangul-1-4",
@@ -162,11 +124,9 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-1",
-    "activities": [
-      "act-fc-h1-4",
-      "act-mc-h1-4"
-    ]
+    "activities": ["act-fc-h1-4", "act-mc-h1-4"]
   },
+
   {
     "id": "ko-hangul-2-1",
     "slug": "ko-hangul-2-1",
@@ -174,20 +134,16 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-2",
-    "activities": [
-      "act-fc-h2-1"
-    ]
+    "activities": ["act-fc-h2-1"]
   },
   {
     "id": "ko-hangul-2-2",
     "slug": "ko-hangul-2-2",
-    "title": "Y‑sound Vowels: ㅑ, ㅕ, ㅛ, ㅠ",
+    "title": "Y-sound Vowels: ㅑ, ㅕ, ㅛ, ㅠ",
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-2",
-    "activities": [
-      "act-fc-h2-2"
-    ]
+    "activities": ["act-fc-h2-2"]
   },
   {
     "id": "ko-hangul-2-3",
@@ -196,9 +152,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-2",
-    "activities": [
-      "act-fc-h2-3"
-    ]
+    "activities": ["act-fc-h2-3"]
   },
   {
     "id": "ko-hangul-2-4",
@@ -207,11 +161,9 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-2",
-    "activities": [
-      "act-fc-h2-4",
-      "act-mc-h2-4"
-    ]
+    "activities": ["act-fc-h2-4", "act-mc-h2-4"]
   },
+
   {
     "id": "ko-hangul-3-1",
     "slug": "ko-hangul-3-1",
@@ -219,10 +171,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-3",
-    "activities": [
-      "act-fc-h3-1",
-      "act-mc-h3-1"
-    ]
+    "activities": ["act-fc-h3-1", "act-mc-h3-1"]
   },
   {
     "id": "ko-hangul-3-2",
@@ -231,10 +180,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-3",
-    "activities": [
-      "act-fc-h3-2",
-      "act-mc-h3-2"
-    ]
+    "activities": ["act-fc-h3-2", "act-mc-h3-2"]
   },
   {
     "id": "ko-hangul-3-3",
@@ -243,10 +189,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-3",
-    "activities": [
-      "act-fc-h3-3",
-      "act-mc-h3-3"
-    ]
+    "activities": ["act-fc-h3-3", "act-mc-h3-3"]
   },
   {
     "id": "ko-hangul-3-4",
@@ -255,11 +198,9 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-3",
-    "activities": [
-      "act-fc-h3-4",
-      "act-mc-h3-4"
-    ]
+    "activities": ["act-fc-h3-4", "act-mc-h3-4"]
   },
+
   {
     "id": "ko-hangul-4-1",
     "slug": "ko-hangul-4-1",
@@ -267,10 +208,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-4",
-    "activities": [
-      "act-fc-h4-1",
-      "act-mc-h4-1"
-    ]
+    "activities": ["act-fc-h4-1", "act-mc-h4-1"]
   },
   {
     "id": "ko-hangul-4-2",
@@ -279,10 +217,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-4",
-    "activities": [
-      "act-fc-h4-2",
-      "act-mc-h4-2"
-    ]
+    "activities": ["act-fc-h4-2", "act-mc-h4-2"]
   },
   {
     "id": "ko-hangul-4-3",
@@ -291,10 +226,7 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-4",
-    "activities": [
-      "act-fc-h4-3",
-      "act-mc-h4-3"
-    ]
+    "activities": ["act-fc-h4-3", "act-mc-h4-3"]
   },
   {
     "id": "ko-hangul-4-4",
@@ -303,9 +235,205 @@
     "language": "ko",
     "type": "lesson",
     "parentId": "module-ko-hangul-4",
-    "activities": [
-      "act-fc-h4-4",
-      "act-mc-h4-4"
-    ]
+    "activities": ["act-fc-h4-4", "act-mc-h4-4"]
+  },
+
+  {
+    "id": "ko-korean-path-1-1",
+    "slug": "ko-korean-path-1-1",
+    "title": "Subject Marker: 이/가",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 1,
+      "stage": "foundations",
+      "stageOrder": 1,
+      "description": "[EXAM] The subject particle marks who or what performs the action",
+      "estimatedMinutes": 25,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-1-fc", "act-kp-1-1-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-2",
+    "slug": "ko-korean-path-1-2",
+    "title": "Object Marker: 을/를",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 2,
+      "stage": "foundations",
+      "stageOrder": 2,
+      "description": "[EXAM] The object particle marks who or what receives the action",
+      "estimatedMinutes": 25,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-2-fc", "act-kp-1-2-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-3",
+    "slug": "ko-korean-path-1-3",
+    "title": "Location & Direction: 에 / 에서",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 3,
+      "stage": "foundations",
+      "stageOrder": 3,
+      "description": "[EXAM] 에 marks destination or location; 에서 marks where an action happens",
+      "estimatedMinutes": 25,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-3-fc", "act-kp-1-3-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-4",
+    "slug": "ko-korean-path-1-4",
+    "title": "Verb Conjugation: -아요 / -어요",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 4,
+      "stage": "foundations",
+      "stageOrder": 4,
+      "description": "[EXAM+LANGUAGE] How Korean verbs change in casual polite present tense",
+      "estimatedMinutes": 30,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-4-fc", "act-kp-1-4-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-5",
+    "slug": "ko-korean-path-1-5",
+    "title": "Common Verbs: 하다, 가다, 오다, 있다, 없다",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 5,
+      "stage": "foundations",
+      "stageOrder": 5,
+      "description": "[EXAM+LANGUAGE] The five most essential verbs in Korean, conjugated with -아요/-어요",
+      "estimatedMinutes": 30,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-5-fc", "act-kp-1-5-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-6",
+    "slug": "ko-korean-path-1-6",
+    "title": "Formal Polite: -습니다",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 6,
+      "stage": "foundations",
+      "stageOrder": 6,
+      "description": "[EXAM] The formal polite ending used in official contexts and exam texts",
+      "estimatedMinutes": 20,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-6-fc", "act-kp-1-6-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-7",
+    "slug": "ko-korean-path-1-7",
+    "title": "Negation: 안",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 7,
+      "stage": "foundations",
+      "stageOrder": 7,
+      "description": "[EXAM+LANGUAGE] How to negate verbs using 안 for refusal or choice",
+      "estimatedMinutes": 20,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-7-fc", "act-kp-1-7-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-8",
+    "slug": "ko-korean-path-1-8",
+    "title": "Negation: 못 vs 안",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 8,
+      "stage": "foundations",
+      "stageOrder": 8,
+      "description": "[EXAM+LANGUAGE] Distinguishing 못 (inability) from 안 (refusal)—critical for Vietnamese learners",
+      "estimatedMinutes": 25,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-8-fc", "act-kp-1-8-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-9",
+    "slug": "ko-korean-path-1-9",
+    "title": "Polite Commands: -(으)세요",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 9,
+      "stage": "foundations",
+      "stageOrder": 9,
+      "description": "[EXAM+LANGUAGE] How to make polite requests and commands in Korean",
+      "estimatedMinutes": 20,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-9-fc", "act-kp-1-9-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-10",
+    "slug": "ko-korean-path-1-10",
+    "title": "Future Plans and Intentions: -(으)ㄹ 거예요",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 10,
+      "stage": "foundations",
+      "stageOrder": 10,
+      "description": "Cách dùng -(으)ㄹ 거예요 để nói về kế hoạch, dự định hoặc dự đoán trong tiếng Hàn.",
+      "estimatedMinutes": 20,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-10-fc", "act-kp-1-10-mc"]
+  },
+  {
+    "id": "ko-korean-path-1-11",
+    "slug": "ko-korean-path-1-11",
+    "title": "Consolidation: Simple Korean Sentences",
+    "language": "ko",
+    "type": "lesson",
+    "parentId": "stage-ko-korean-path-foundations",
+    "meta": {
+      "track": "korean-path",
+      "lessonNumber": 11,
+      "stage": "foundations",
+      "stageOrder": 11,
+      "description": "Consolidate essential Korean grammar by building and understanding simple Korean sentences.",
+      "estimatedMinutes": 40,
+      "sections": ["learn", "practice", "quiz"]
+    },
+    "activities": ["act-kp-1-11-fc", "act-kp-1-11-mc"]
   }
 ]

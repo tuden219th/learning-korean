@@ -42,5 +42,18 @@
     "type": "module",
     "order": 4,
     "parentId": "course-ko-hangul-foundation"
+  },
+  {
+    "id": "stage-ko-korean-path-foundations",
+    "slug": "stage-1-foundations",
+    "title": "Stage 1: Korean Foundations",
+    "language": "ko",
+    "type": "module",
+    "order": 1,
+    "parentId": "track-ko-korean-path",
+    "meta": {
+      "stage": "foundations",
+      "description": "Essential Korean grammar and particles for Grade 10 exam readiness"
+    }
   }
 ]

@@ -29,7 +29,7 @@ interface CatalogIndex {
 
 interface LessonFile {
   course?: EntityBase;
-  lessons: EntityBase[];
+  lessons?: EntityBase[];
 }
 
 interface ActivityFile {
@@ -45,7 +45,13 @@ function readJson<T>(relativePath: string): T {
 
   const raw = fs.readFileSync(filePath, "utf-8");
 
+  try {
   return JSON.parse(raw) as T;
+} catch (error) {
+  console.error(`❌ INVALID JSON FILE: ${filePath}`);
+  console.error(raw.slice(0, 300));
+  throw error;
+}
 }
 
 function loadIndex(): CatalogIndex {
@@ -103,8 +109,23 @@ function loadCatalog(): Catalog {
   // --------------------------------
 
   for (const file of Object.values(index.lessons)) {
-    const data = readJson<LessonFile>(file);
+    const data = readJson<LessonFile | EntityBase[]>(file);
 
+    // Support lesson files that are directly an array:
+    // [
+    //   { ... },
+    //   { ... }
+    // ]
+    if (Array.isArray(data)) {
+      entities.push(...data);
+      continue;
+    }
+
+    // Support lesson files with:
+    // {
+    //   "course": { ... },
+    //   "lessons": [ ... ]
+    // }
     if (data.course) {
       const courseExists = entities.some(
         (entity) => entity.id === data.course?.id
@@ -115,7 +136,9 @@ function loadCatalog(): Catalog {
       }
     }
 
-    entities.push(...data.lessons);
+    if (Array.isArray(data.lessons)) {
+      entities.push(...data.lessons);
+    }
   }
 
   // --------------------------------
