@@ -13,9 +13,9 @@ function getLessons(course: CourseWithModules): EntityBase[] {
 }
 
 function getLessonHref(course: CourseWithModules, lessonId: string): string | null {
-  const module = course.modules.find((item) => item.lessons.some((lesson) => lesson.id === lessonId));
-  const lesson = module?.lessons.find((item) => item.id === lessonId);
-  return module && lesson ? `/${course.language}/${module.slug}/${lesson.slug}` : null;
+  const lessonModule = course.modules.find((item) => item.lessons.some((lesson) => lesson.id === lessonId));
+  const lesson = lessonModule?.lessons.find((item) => item.id === lessonId);
+  return lessonModule && lesson ? `/${course.language}/${lessonModule.slug}/${lesson.slug}` : null;
 }
 
 export default function LearningProgress({ courses }: LearningProgressProps) {

@@ -64,6 +64,8 @@ export interface CourseWithModules extends EntityBase {
   modules: Array<EntityBase & { lessons: EntityBase[] }>;
 }
 
+export type NavigationCourse = CourseWithModules;
+
 export interface Language extends EntityBase {
   type: 'language';
 }

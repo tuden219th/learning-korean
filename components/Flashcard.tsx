@@ -7,18 +7,16 @@ function storageKey(activityId: string) {
 }
 
 export default function Flashcard({ activity }: { activity: FlashcardActivity }) {
-  const [index, setIndex] = useState(0);
-  const [flipped, setFlipped] = useState(false);
-
-  useEffect(() => {
-    const raw = localStorage.getItem(storageKey(activity.id));
-    if (raw) {
-      try {
-        const data = JSON.parse(raw);
-        if (typeof data.index === 'number') setIndex(data.index);
-      } catch {}
+  const [index, setIndex] = useState(() => {
+    if (typeof window === 'undefined') return 0;
+    try {
+      const data = JSON.parse(localStorage.getItem(storageKey(activity.id)) ?? '{}');
+      return typeof data.index === 'number' ? data.index : 0;
+    } catch {
+      return 0;
     }
-  }, [activity.id]);
+  });
+  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(storageKey(activity.id), JSON.stringify({ index }));
@@ -39,13 +37,13 @@ export default function Flashcard({ activity }: { activity: FlashcardActivity })
       <div className="mt-2 flex gap-2">
         <button
           className="px-3 py-1 border rounded"
-          onClick={() => setIndex((i) => Math.max(0, i - 1))}
+          onClick={() => setIndex((i: number) => Math.max(0, i - 1))}
         >
           Prev
         </button>
         <button
           className="px-3 py-1 border rounded"
-          onClick={() => setIndex((i) => Math.min(cards.length - 1, i + 1))}
+          onClick={() => setIndex((i: number) => Math.min(cards.length - 1, i + 1))}
         >
           Next
         </button>

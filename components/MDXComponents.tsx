@@ -3,7 +3,7 @@ import { getActivity } from '../lib/content';
 import ActivityRenderer from './ActivityRenderer';
 
 export default function Activity({ id }: { id: string }) {
-  const activity = getActivity(id as string) as any;
+  const activity = getActivity(id);
   if (!activity) return <div>Activity not found: {id}</div>;
   return <ActivityRenderer activity={activity} />;
 }

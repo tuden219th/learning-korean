@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import type { MultipleChoiceActivity } from '../types/content';
 
 function storageKey(activityId: string) {
@@ -7,21 +7,25 @@ function storageKey(activityId: string) {
 }
 
 export default function MultipleChoice({ activity }: { activity: MultipleChoiceActivity }) {
-  const [selected, setSelected] = useState<string | null>(null);
-  const [answered, setAnswered] = useState<boolean>(false);
-  const [correct, setCorrect] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const raw = localStorage.getItem(storageKey(activity.id));
-    if (raw) {
-      try {
-        const data = JSON.parse(raw);
-        setSelected(data.selected ?? null);
-        setAnswered(!!data.answered);
-        setCorrect(typeof data.correct === 'boolean' ? data.correct : null);
-      } catch {}
-    }
-  }, [activity.id]);
+  const saved = typeof window === 'undefined' ? null : localStorage.getItem(storageKey(activity.id));
+  let initial: { selected: string | null; answered: boolean; correct: boolean | null } = {
+    selected: null,
+    answered: false,
+    correct: null,
+  };
+  if (saved) {
+    try {
+      const data = JSON.parse(saved);
+      initial = {
+        selected: typeof data.selected === 'string' ? data.selected : null,
+        answered: !!data.answered,
+        correct: typeof data.correct === 'boolean' ? data.correct : null,
+      };
+    } catch {}
+  }
+  const [selected, setSelected] = useState<string | null>(initial.selected);
+  const [answered, setAnswered] = useState(initial.answered);
+  const [correct, setCorrect] = useState<boolean | null>(initial.correct);
 
   function submit() {
     if (!selected) return;

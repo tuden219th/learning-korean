@@ -4,6 +4,7 @@ import { marked } from 'marked';
 import Activity from '../../../components/MDXComponents';
 import LessonCompletion from '../../../components/LessonCompletion';
 import type { Metadata } from 'next';
+import type { EntityBase } from '../../../types/content';
 import { createBreadcrumbSchema } from '../../../lib/structured-data';
 
 type Props = {
@@ -86,15 +87,15 @@ export default async function Page({ params }: Props) {
   if (entity.type === 'lesson') {
     // build breadcrumb by walking parent chain
     const breadcrumb: Array<{ id: string; slug: string; title: string }> = [];
-    (function buildCrumb(e: any | undefined) {
+    (function buildCrumb(e: EntityBase | undefined) {
       if (!e) return;
       breadcrumb.push({ id: e.id, slug: e.slug, title: e.title });
       if (e.parentId) buildCrumb(getEntity(e.parentId));
-    })(entity as any);
+    })(entity);
     breadcrumb.reverse();
 
     // find module ancestor
-    let moduleAncestor = entity as any;
+    let moduleAncestor: EntityBase | null | undefined = entity;
     while (moduleAncestor && moduleAncestor.type !== 'module') {
       moduleAncestor = moduleAncestor.parentId ? getEntity(moduleAncestor.parentId) : null;
     }

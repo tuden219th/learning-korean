@@ -1,6 +1,15 @@
 import Link from "next/link";
 
-export default function ContinueCard({ nextLesson }: any) {
+type ContinueLesson = {
+  language: string;
+  slug: string;
+  title: string;
+  moduleSlug?: string;
+  courseTitle?: string;
+  moduleTitle?: string;
+};
+
+export default function ContinueCard({ nextLesson }: { nextLesson?: ContinueLesson | null }) {
   if (!nextLesson) return null;
 
   const path = `/${[nextLesson.language, nextLesson.moduleSlug, nextLesson.slug].filter(Boolean).join('/')}`;

@@ -1,23 +1,33 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
+import type { NavigationCourse } from "../types/content";
 
-export default function MobileNav({ courses, onClose, language }: any) {
+type MobileNavProps = {
+  courses: NavigationCourse[];
+  onClose: () => void;
+  language: string;
+};
+
+export default function MobileNav({ courses, onClose, language }: MobileNavProps) {
   const hostRef = useRef<HTMLDivElement | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
+  const subscribe = useCallback((onStoreChange: () => void) => {
     const el = document.createElement("div");
     document.body.appendChild(el);
     hostRef.current = el;
-    setMounted(true);
+    onStoreChange();
     return () => {
-      if (hostRef.current && hostRef.current.parentNode) {
-        hostRef.current.parentNode.removeChild(hostRef.current);
-      }
+      if (hostRef.current?.parentNode) hostRef.current.parentNode.removeChild(hostRef.current);
+      hostRef.current = null;
     };
   }, []);
+  const getSnapshot = useCallback(() => hostRef.current, []);
+  const host = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    () => null,
+  );
 
   const content = (
     <div className="fixed inset-0 z-50">
@@ -29,15 +39,15 @@ export default function MobileNav({ courses, onClose, language }: any) {
         </div>
 
         <nav className="space-y-4">
-          {courses.map((c: any) => (
+          {courses.map((c) => (
             <div key={c.id}>
               <div className="text-sm font-medium">{c.title}</div>
               <div className="mt-2 space-y-1 text-sm">
-                {c.modules.map((m: any) => (
+                {c.modules.map((m) => (
                   <div key={m.id}>
                     <div className="text-xs font-semibold text-zinc-600">{m.title}</div>
                     <div className="mt-1 flex flex-col gap-1">
-                      {m.lessons.map((l: any) => (
+                      {m.lessons.map((l) => (
                         <Link key={l.id} href={`/${language}/${m.slug}/${l.slug}`} className="text-indigo-600">
                           {l.title}
                         </Link>
@@ -53,6 +63,6 @@ export default function MobileNav({ courses, onClose, language }: any) {
     </div>
   );
 
-  if (!mounted || !hostRef.current) return null;
-  return createPortal(content, hostRef.current);
+  if (!host) return null;
+  return createPortal(content, host);
 }

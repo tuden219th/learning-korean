@@ -128,59 +128,6 @@ const lessons = entities.filter(
   (entity) => entity.type === "lesson"
 );
 
-const modules = entities.filter(
-  (entity) => entity.type === "module"
-);
-
-const courses = entities.filter(
-  (entity) => entity.type === "course"
-);
-
-const moduleMap = new Map(
-  modules.map((module) => [module.id, module])
-);
-
-const courseMap = new Map(
-  courses.map((course) => [course.id, course])
-);
-
-// Find which course a lesson belongs to
-function findCourseForLesson(lesson) {
-  let current = moduleMap.get(lesson.parentId);
-
-  if (!current) {
-    return null;
-  }
-
-  const visited = new Set();
-
-  while (current) {
-    if (visited.has(current.id)) {
-      console.warn(
-        `⚠️ Circular parentId detected around ${current.id}`
-      );
-      return null;
-    }
-
-    visited.add(current.id);
-
-    if (current.type === "course") {
-      return current;
-    }
-
-    current = moduleMap.get(current.parentId);
-
-    if (!current) {
-      // It may be a course directly.
-      current = courseMap.get(
-        current?.parentId
-      );
-    }
-  }
-
-  return null;
-}
-
 // More reliable parent traversal
 function getCourseForLesson(lesson) {
   let parentId = lesson.parentId;

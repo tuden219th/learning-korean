@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
-import { isTrackMetadata } from '../../types/content';
+import { isTrackMetadata, type CourseWithModules, type EntityBase } from '../../types/content';
 import type { Metadata } from 'next';
 import { getCatalog } from '../../lib/content';
 
@@ -46,19 +46,19 @@ export default async function LanguageLayout({ children, params }: Props) {
   // find courses for this language that have modules with lessons
   const catalog = getCatalog();
   const courses = catalog.entities
-    .filter((entity) => entity.type === 'course' && entity.language === language)
+    .filter((entity): entity is EntityBase & { type: 'course' } => entity.type === 'course' && entity.language === language)
     .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
 
-  const visibleCourses = courses.map((c: any) => {
+  const visibleCourses: CourseWithModules[] = courses.map((c) => {
     const modules = getChildren(c.id) || [];
     const modulesWithLessons = modules
-      .map((m: any) => {
+      .map((m) => {
         const lessons = getChildren(m.id) || [];
         return { ...m, lessons };
       })
-      .filter((module: any) => module.lessons.length > 0);
+      .filter((module) => module.lessons.length > 0);
     return { ...c, modules: modulesWithLessons };
-  }).filter((course: any) => course.modules.length > 0 || isTrackMetadata(course.meta));
+  }).filter((course) => course.modules.length > 0 || isTrackMetadata(course.meta));
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">

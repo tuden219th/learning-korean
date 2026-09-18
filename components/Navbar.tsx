@@ -5,7 +5,7 @@ import Link from "next/link";
 import MobileNav from "./MobileNav";
 import BMenu from "./button/b-menu";
 
-export default function Navbar({}: any) {
+export default function Navbar() {
   const [open, setOpen] = React.useState(false);
 
   return (

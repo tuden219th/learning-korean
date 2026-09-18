@@ -1,6 +1,9 @@
 import Link from "next/link";
+import type { EntityBase } from "../types/content";
 
-export default function ModuleCard({ module, language }: any) {
+type ModuleWithLessons = EntityBase & { lessons?: EntityBase[] };
+
+export default function ModuleCard({ module, language }: { module: ModuleWithLessons; language: string }) {
   const firstLesson = module.lessons && module.lessons[0];
   const lessonPath = firstLesson ? `/${[language, module.slug, firstLesson.slug].filter(Boolean).join('/')}` : null;
 

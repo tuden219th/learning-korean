@@ -2,8 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
+import type { NavigationCourse } from "../types/content";
 
-export default function Header({ courses, language }: any) {
+type HeaderProps = {
+  courses: NavigationCourse[];
+  language: string;
+};
+
+export default function Header({ courses, language }: HeaderProps) {
   const [open, setOpen] = React.useState(false);
 
   return (
