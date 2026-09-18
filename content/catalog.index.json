@@ -11,11 +11,13 @@
   "lessons": {
     "greetings-basics": "./lessons/greetings-basics.json",
     "hangul-foundation": "./lessons/hangul-foundation.json",
-    "korean-path-foundations": "./lessons/korean-path-foundations.json"
+    "korean-path-foundations": "./lessons/korean-path-foundations.json",
+    "korean-conversation": "./lessons/korean-conversation.json"
   },
   "activities": {
     "greetings": "./activities/greetings.json",
     "hangul-foundation": "./activities/hangul-foundation.json",
-    "korean-path-foundations": "./activities/korean-path-foundations.json"
+    "korean-path-foundations": "./activities/korean-path-foundations.json",
+    "korean-conversation": "./activities/korean-conversation.json"
   }
 }

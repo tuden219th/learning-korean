@@ -46,5 +46,14 @@
       "goal": "Nâng cao năng lực tiếng Hàn và mở rộng mục tiêu học tập dài hạn liên quan đến Hàn Quốc.",
       "audience": "Học sinh tuổi học đường muốn học vượt lộ trình phổ cập"
     }
+  },
+  {
+    "id": "course-ko-korean-conversation",
+    "slug": "korean-conversation",
+    "title": "Korean Conversation",
+    "language": "ko",
+    "type": "course",
+    "order": 5,
+    "parentId": "level-ko-1"
   }
 ]

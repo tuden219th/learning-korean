@@ -55,5 +55,14 @@
       "stage": "foundations",
       "description": "Essential Korean grammar and particles for Grade 10 exam readiness"
     }
+  },
+  {
+    "id": "module-ko-self-introduction",
+    "slug": "self-introduction",
+    "title": "Self Introduction",
+    "language": "ko",
+    "type": "module",
+    "order": 1,
+    "parentId": "course-ko-korean-conversation"
   }
 ]

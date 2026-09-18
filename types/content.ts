@@ -88,7 +88,50 @@ export type MultipleChoiceActivity = {
   choices: { id: string; text: string; correct: boolean }[];
 };
 
-export type Activity = FlashcardActivity | MultipleChoiceActivity;
+export type ListeningActivity = {
+  type: 'listening';
+  id: string;
+  title: string;
+  text: string;
+  translation: string;
+  question: string;
+  choices: { id: string; text: string; correct: boolean }[];
+};
+
+export type SpeakingActivity = {
+  type: 'speaking';
+  id: string;
+  title: string;
+  prompt: string;
+  reference: string;
+};
+
+export type ReadingActivity = {
+  type: 'reading';
+  id: string;
+  title: string;
+  passage: string;
+  translation: string;
+  question: string;
+  choices: { id: string; text: string; correct: boolean }[];
+};
+
+export type WritingActivity = {
+  type: 'writing';
+  id: string;
+  title: string;
+  prompt: string;
+  hint: string;
+  answers: string[];
+};
+
+export type Activity =
+  | FlashcardActivity
+  | MultipleChoiceActivity
+  | ListeningActivity
+  | SpeakingActivity
+  | ReadingActivity
+  | WritingActivity;
 
 export interface Catalog {
   entities: EntityBase[];

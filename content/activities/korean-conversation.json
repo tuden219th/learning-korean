@@ -1,0 +1,43 @@
+[
+  {
+    "type": "listening",
+    "id": "act-conversation-1-listening",
+    "title": "Nghe và hiểu",
+    "text": "안녕하세요. 저는 민수입니다. 베트남 사람입니다. 학생입니다.",
+    "translation": "Xin chào. Tôi là Minsu. Tôi là người Việt Nam. Tôi là học sinh.",
+    "question": "Minsu là ai?",
+    "choices": [
+      { "id": "student", "text": "Học sinh", "correct": true },
+      { "id": "teacher", "text": "Giáo viên", "correct": false },
+      { "id": "doctor", "text": "Bác sĩ", "correct": false }
+    ]
+  },
+  {
+    "type": "speaking",
+    "id": "act-conversation-1-speaking",
+    "title": "Nói và ghi âm",
+    "prompt": "Hãy tự giới thiệu: chào hỏi, nói tên và nói bạn là học sinh.",
+    "reference": "안녕하세요. 저는 ___입니다. 학생입니다."
+  },
+  {
+    "type": "reading",
+    "id": "act-conversation-1-reading",
+    "title": "Đọc hiểu",
+    "passage": "안녕하세요. 저는 린입니다.\n베트남 사람입니다.\n한국어 학생입니다.",
+    "translation": "Xin chào. Tôi là Lin. Tôi là người Việt Nam. Tôi là học sinh tiếng Hàn.",
+    "question": "린의 국적은 무엇입니까? (Quốc tịch của Lin là gì?)",
+    "choices": [
+      { "id": "vietnam", "text": "베트남 사람입니다.", "correct": true },
+      { "id": "korea", "text": "한국 사람입니다.", "correct": false },
+      { "id": "japan", "text": "일본 사람입니다.", "correct": false }
+    ]
+  },
+  {
+    "type": "writing",
+    "id": "act-conversation-1-writing",
+    "title": "Viết câu giới thiệu",
+    "prompt": "Viết bằng tiếng Hàn: Tôi là học sinh.",
+    "hint": "학생입니다",
+    "answers": ["학생입니다.", "학생입니다"]
+  }
+]

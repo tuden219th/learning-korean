@@ -1,0 +1,27 @@
+{
+  "lessons": [
+    {
+      "id": "ko-conversation-1",
+      "slug": "introducing-yourself",
+      "title": "Introducing Yourself",
+      "language": "ko",
+      "type": "lesson",
+      "parentId": "module-ko-self-introduction",
+      "order": 1,
+      "activities": [
+        "act-conversation-1-listening",
+        "act-conversation-1-speaking",
+        "act-conversation-1-reading",
+        "act-conversation-1-writing"
+      ],
+      "meta": {
+        "track": "korean-conversation",
+        "lessonNumber": 1,
+        "description": "Giới thiệu tên, quốc tịch và nghề nghiệp bằng tiếng Hàn.",
+        "objectives": ["Giới thiệu bản thân bằng câu lịch sự", "Hiểu một đoạn hội thoại ngắn", "Luyện đủ bốn kỹ năng"],
+        "estimatedMinutes": 20,
+        "sections": ["learn", "vocabulary", "pronunciation", "dialogue", "reading", "practice", "completion"]
+      }
+    }
+  ]
+}
