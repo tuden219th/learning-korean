@@ -48,6 +48,13 @@ export function isTrackMetadata(metadata: EntityMetadata | undefined): metadata 
     && metadata.kind === 'curriculum-track';
 }
 
+export function isLessonMetadata(metadata: EntityMetadata | undefined): metadata is LessonMetadata {
+  return typeof metadata === 'object'
+    && metadata !== null
+    && 'lessonNumber' in metadata
+    && typeof metadata.lessonNumber === 'number';
+}
+
 export interface EntityBase {
   id: string;
   slug: string;

@@ -1,10 +1,10 @@
 import fs from "fs";
 import path from "path";
+import { isLessonMetadata } from "../types/content";
 import type {
   Catalog,
   Activity,
   EntityBase,
-  LessonMetadata,
 } from "../types/content";
 
 const CONTENT_PATH = path.join(process.cwd(), "content");
@@ -200,17 +200,6 @@ function getEntityOrder(
   }
 
   return Number.MAX_SAFE_INTEGER;
-}
-
-function isLessonMetadata(
-  metadata: EntityBase["meta"]
-): metadata is LessonMetadata {
-  return (
-    typeof metadata === "object" &&
-    metadata !== null &&
-    "lessonNumber" in metadata &&
-    typeof metadata.lessonNumber === "number"
-  );
 }
 
 export function getLanguages(): EntityBase[] {

@@ -2,7 +2,7 @@
 
 ## Tracks
 
-The catalog represents the long-term tracks as `course` entities with `meta.kind: "curriculum-track"`:
+The catalog represents the long-term tracks as `course` entities in `entities/courses.json`, with `meta.kind: "curriculum-track"`:
 
 - `track-ko-korean-path` / `korean-path`
 - `track-ko-korean-challenge` / `korean-challenge`
@@ -11,7 +11,7 @@ This keeps the current `course → module → lesson` UI and route model unchang
 
 ## Add a stage
 
-Add one `module` below the intended track. The stage title and `order` are the navigation label and its position.
+Add one `module` below the intended track in `entities/modules.json`. The stage title and `order` are the navigation label and its position.
 
 ```json
 {
@@ -29,7 +29,7 @@ Stages are optional and can be introduced only when the first lesson for that st
 
 ## Add one lesson
 
-Add one `lesson` entity below its stage and one matching `.mdx` file in `content/lessons/`. The `id`, `slug`, and `meta.lessonNumber` are stable once released.
+Add one `lesson` entity to a track-specific JSON file under `content/lessons/`, register that file in `catalog.index.json`, and add one matching `.mdx` file. The `id`, `slug`, and `meta.lessonNumber` are stable once released.
 
 ```json
 {
@@ -53,7 +53,7 @@ Add one `lesson` entity below its stage and one matching `.mdx` file in `content
 }
 ```
 
-The resulting route is `/ko/korean-path/foundation/lesson-1`. Korean Challenge follows the same pattern with its own ID namespace and `meta.track: "korean-challenge"`.
+The current stage uses the stable URL pattern `/ko/korean-path/stage-1-foundations/ko-korean-path-1-1`. Future lessons should preserve this route pattern unless a deliberate migration is planned. Korean Challenge follows the same pattern with its own ID namespace and `meta.track: "korean-challenge"`.
 
 `lessonNumber` is sequential within its own track, not globally. `getChildren()` sorts numbered lessons numerically, so lesson 9 remains before lesson 10.
 

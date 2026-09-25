@@ -1,8 +1,9 @@
 "use client";
+
 import React, { useCallback, useRef, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
-import type { NavigationCourse } from "../types/content";
+import { isTrackMetadata, type NavigationCourse } from "../types/content";
 
 type MobileNavProps = {
   courses: NavigationCourse[];
@@ -48,7 +49,11 @@ export default function MobileNav({ courses, onClose, language }: MobileNavProps
                     <div className="text-xs font-semibold text-zinc-600">{m.title}</div>
                     <div className="mt-1 flex flex-col gap-1">
                       {m.lessons.map((l) => (
-                        <Link key={l.id} href={`/${language}/${m.slug}/${l.slug}`} className="text-indigo-600">
+                        <Link
+                          key={l.id}
+                          href={`/${[language, isTrackMetadata(c.meta) ? c.slug : null, m.slug, l.slug].filter(Boolean).join('/')}`}
+                          className="text-indigo-600"
+                        >
                           {l.title}
                         </Link>
                       ))}

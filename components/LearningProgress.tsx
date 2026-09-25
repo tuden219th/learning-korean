@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { CourseWithModules, EntityBase } from "../types/content";
+import { isTrackMetadata, type CourseWithModules, type EntityBase } from "../types/content";
 import { useCompletedLessons } from "../lib/progress";
 
 type LearningProgressProps = {
@@ -15,7 +15,10 @@ function getLessons(course: CourseWithModules): EntityBase[] {
 function getLessonHref(course: CourseWithModules, lessonId: string): string | null {
   const lessonModule = course.modules.find((item) => item.lessons.some((lesson) => lesson.id === lessonId));
   const lesson = lessonModule?.lessons.find((item) => item.id === lessonId);
-  return lessonModule && lesson ? `/${course.language}/${lessonModule.slug}/${lesson.slug}` : null;
+  const trackSegment = isTrackMetadata(course.meta) ? course.slug : null;
+  return lessonModule && lesson
+    ? `/${[course.language, trackSegment, lessonModule.slug, lesson.slug].filter(Boolean).join("/")}`
+    : null;
 }
 
 export default function LearningProgress({ courses }: LearningProgressProps) {

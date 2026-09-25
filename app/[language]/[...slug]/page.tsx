@@ -3,8 +3,8 @@ import { getLessonContent, findEntityBySlug, getEntity, getChildren } from '../.
 import { marked } from 'marked';
 import Activity from '../../../components/MDXComponents';
 import LessonCompletion from '../../../components/LessonCompletion';
+import { isTrackMetadata, type EntityBase } from '../../../types/content';
 import type { Metadata } from 'next';
-import type { EntityBase } from '../../../types/content';
 import { createBreadcrumbSchema } from '../../../lib/structured-data';
 
 type Props = {
@@ -95,9 +95,9 @@ export default async function Page({ params }: Props) {
     breadcrumb.reverse();
 
     // find module ancestor
-    let moduleAncestor: EntityBase | null | undefined = entity;
+    let moduleAncestor: EntityBase | null = entity;
     while (moduleAncestor && moduleAncestor.type !== 'module') {
-      moduleAncestor = moduleAncestor.parentId ? getEntity(moduleAncestor.parentId) : null;
+      moduleAncestor = moduleAncestor.parentId ? getEntity(moduleAncestor.parentId) ?? null : null;
     }
 
     const moduleLessons = moduleAncestor ? getChildren(moduleAncestor.id).filter((c) => c.type === 'lesson') : [];
@@ -261,6 +261,52 @@ export default async function Page({ params }: Props) {
           </main>
         </div>
       </div>
+    );
+  }
+
+  if (entity.type === 'course' || entity.type === 'module') {
+    const children = getChildren(entity.id);
+    const track = isTrackMetadata(entity.meta) ? entity.meta : undefined;
+    const parentCourse = entity.type === 'module' && entity.parentId
+      ? getEntity(entity.parentId)
+      : undefined;
+    const parentTrack = isTrackMetadata(parentCourse?.meta) ? parentCourse : undefined;
+    const childHref = (child: { slug: string }) => {
+      if (track) return `/${language}/${entity.slug}/${child.slug}`;
+      if (parentTrack) return `/${language}/${parentTrack.slug}/${entity.slug}/${child.slug}`;
+      if (entity.type === 'course') return `/${language}/${child.slug}`;
+      return `/${language}/${entity.slug}/${child.slug}`;
+    };
+
+    return (
+      <main className="mx-auto max-w-4xl p-4">
+        <header className="mb-6">
+          <h1 className="text-3xl font-bold">{entity.title}</h1>
+          {track && (
+            <>
+              <p className="mt-2 font-medium text-[var(--accent)]">{track.vietnameseLabel}</p>
+              <p className="mt-2 text-zinc-600">{track.goal}</p>
+            </>
+          )}
+        </header>
+
+        {children.length > 0 ? (
+          <nav aria-label={`${entity.title} content`} className="space-y-2">
+            {children.map((child, index) => (
+              <a
+                key={child.id}
+                href={childHref(child)}
+                className="block rounded border bg-white px-4 py-3 hover:border-[var(--accent)]"
+              >
+                <span className="mr-2 text-sm text-zinc-500">{index + 1}.</span>
+                {child.title}
+              </a>
+            ))}
+          </nav>
+        ) : (
+          <p className="text-zinc-600">Lộ trình đang được xây dựng theo từng bài học.</p>
+        )}
+      </main>
     );
   }
 

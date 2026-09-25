@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { isTrackMetadata, type CourseWithModules } from "../types/content";
+import { isLessonMetadata, isTrackMetadata, type CourseWithModules } from "../types/content";
 import { useCompletedLessons } from "../lib/progress";
 
 type CourseCardProps = {
@@ -14,7 +14,9 @@ export default function CourseCard({ course, index }: CourseCardProps) {
   const track = isTrackMetadata(course.meta) ? course.meta : undefined;
   const firstModule = (course.modules && course.modules[0]) || null;
   const firstLesson = firstModule && firstModule.lessons && firstModule.lessons[0];
-  const lessonPath = firstLesson ? `/${[course.language, firstModule.slug, firstLesson.slug].filter(Boolean).join('/')}` : null;
+  const lessonPath = firstLesson
+    ? `/${[course.language, track ? course.slug : null, firstModule.slug, firstLesson.slug].filter(Boolean).join('/')}`
+    : null;
 
   const lessonCount = course.modules.reduce((sum, module) => sum + module.lessons.length, 0);
   const completedCount = course.modules
@@ -64,7 +66,10 @@ export default function CourseCard({ course, index }: CourseCardProps) {
               <ol className="mt-2 space-y-1">
                 {module.lessons.map((lesson, lessonIndex) => {
                   const isCompleted = completedLessonIds.includes(lesson.id);
-                  const href = `/${course.language}/${module.slug}/${lesson.slug}`;
+                  const href = `/${[course.language, track ? course.slug : null, module.slug, lesson.slug].filter(Boolean).join('/')}`;
+                  const lessonLabel = track && isLessonMetadata(lesson.meta)
+                    ? `Bài ${lesson.meta.lessonNumber}: ${lesson.title}`
+                    : lesson.title;
 
                   return (
                     <li key={lesson.id}>
@@ -73,10 +78,10 @@ export default function CourseCard({ course, index }: CourseCardProps) {
                         className="flex items-center gap-2 rounded px-2 py-1.5 text-sm hover:bg-zinc-50"
                       >
                         <span className={isCompleted ? "text-emerald-600" : "text-zinc-400"} aria-hidden="true">
-                          {isCompleted ? "✓" : lessonIndex + 1}
+                          {isCompleted ? "✓" : track && isLessonMetadata(lesson.meta) ? lesson.meta.lessonNumber : lessonIndex + 1}
                         </span>
                         <span className={isCompleted ? "text-zinc-500 line-through" : "text-zinc-700"}>
-                          {lesson.title}
+                          {lessonLabel}
                         </span>
                       </Link>
                     </li>
